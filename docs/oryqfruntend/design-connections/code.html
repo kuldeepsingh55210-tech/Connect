@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "on-surface": "#1a1c1d",
+        "on-primary-fixed": "#1b1b1e",
+        "surface-container": "#eeeeef",
+        "outline": "#77767b",
+        "tertiary-fixed": "#e8e2d9",
+        "surface-container-highest": "#e2e2e3",
+        "on-primary-fixed-variant": "#47464a",
+        "on-error": "#ffffff",
+        "on-secondary-fixed": "#1a1b22",
+        "background": "#f9f9fa",
+        "surface-bright": "#f9f9fa",
+        "primary-fixed": "#e4e1e6",
+        "tertiary-fixed-dim": "#cbc6bd",
+        "on-secondary-fixed-variant": "#46464e",
+        "secondary-fixed-dim": "#c6c5cf",
+        "surface-dim": "#dadadb",
+        "surface": "#f9f9fa",
+        "on-primary": "#ffffff",
+        "on-background": "#1a1c1d",
+        "on-tertiary": "#ffffff",
+        "on-primary-container": "#858387",
+        "secondary-fixed": "#e3e1ec",
+        "primary-container": "#1b1b1e",
+        "outline-variant": "#c8c5cb",
+        "inverse-primary": "#c8c5ca",
+        "on-error-container": "#93000a",
+        "error": "#ba1a1a",
+        "inverse-surface": "#2f3132",
+        "primary": "#000000",
+        "surface-tint": "#5f5e61",
+        "tertiary-container": "#1d1b16",
+        "on-tertiary-fixed-variant": "#494640",
+        "on-secondary-container": "#63646c",
+        "secondary-container": "#e3e1ec",
+        "surface-variant": "#e2e2e3",
+        "inverse-on-surface": "#f0f1f2",
+        "primary-fixed-dim": "#c8c5ca",
+        "error-container": "#ffdad6",
+        "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f3f3f4",
+        "surface-container-high": "#e8e8e9",
+        "on-secondary": "#ffffff",
+        "on-surface-variant": "#47464b",
+        "on-tertiary-container": "#88837c",
+        "on-tertiary-fixed": "#1d1b16",
+        "secondary": "#5d5e66",
+        "tertiary": "#000000"
+      },
+      borderRadius: {
+        "DEFAULT": "1rem",
+        "lg": "2rem",
+        "xl": "3rem",
+        "full": "9999px"
+      },
+      spacing: {
+        "space-xl": "2.5rem",
+        "gutter": "1.5rem",
+        "space-sm": "0.5rem",
+        "gutter-mobile": "1rem",
+        "space-lg": "1.5rem",
+        "space-xs": "0.25rem",
+        "space-md": "1rem",
+        "margin": "3rem",
+        "margin-mobile": "1.25rem"
+      },
+      fontFamily: {
+        "body-lg": ["Inter"],
+        "display-lg-mobile": ["Inter"],
+        "label-md": ["Inter"],
+        "label-sm": ["Inter"],
+        "headline-lg": ["Inter"],
+        "headline-lg-mobile": ["Inter"],
+        "headline-md": ["Inter"],
+        "display-lg": ["Inter"],
+        "body-md": ["Inter"]
+      },
+      fontSize: {
+        "body-lg": ["16px", { lineHeight: "26px", letterSpacing: "-0.005em", fontWeight: "400" }],
+        "display-lg-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "600" }],
+        "label-md": ["13px", { lineHeight: "18px", letterSpacing: "0.01em", fontWeight: "500" }],
+        "label-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.06em", fontWeight: "600" }],
+        "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "600" }],
+        "headline-lg-mobile": ["24px", { lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "600" }],
+        "headline-md": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "500" }],
+        "display-lg": ["56px", { lineHeight: "64px", letterSpacing: "-0.03em", fontWeight: "600" }],
+        "body-md": ["14px", { lineHeight: "22px", letterSpacing: "0em", fontWeight: "400" }]
+      }
+    }
+  }
+};</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl border-b border-surface-container"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold text-base tracking-tighter">C</div><span class="font-headline-md text-headline-md text-on-surface">Connections</span></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[24px]">notifications</span></button><a class="w-11 h-11 flex items-center justify-center" data-path="profile" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhFmUkWXmY23QYPfG2fOMwiBkoohneFpFxf9Jouy9YNI2hKQmaOnjO9RQARAG0qBmsL_APp1PeFsy9oK0M83-KyArZre372io1x3o0MgnKk_Nx1Nkje_A3m26P12hd_Sct2T9AvlXbCd6i-qtYn2vtEmx-nOwsnyriqjnbSb6MBAah765c8EKU9odweuQj_jWh-z4dJOBUPIalqbatlcRp0L66RUjHLeBzwFmqjFDHmKF1E54qiy1P"/></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface flex-1"><div class="flex flex-col w-full px-margin-mobile pb-8 space-y-space-lg">
+<!-- Header Intro & Delight Metric -->
+<div class="flex items-center justify-between pt-space-xs">
+<div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Connections</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Your neighborhood network is flourishing</p>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-highest text-on-surface border border-outline-variant/40">
+<span class="material-symbols-outlined text-[16px] text-primary">eco</span>
+<span class="font-label-sm text-label-sm">84% Match rate</span>
+</div>
+</div>
+<!-- Segmented Top Tab Bar -->
+<div class="w-full p-1 rounded-full bg-surface-container flex items-center border border-outline-variant/30">
+<button class="flex-1 py-2 rounded-full font-label-md text-label-md text-center transition-all duration-200 bg-primary text-on-primary shadow-sm flex items-center justify-center gap-1.5" id="tab-requests">
+<span>Requests</span>
+<span class="w-5 h-5 rounded-full bg-white/20 text-white text-[11px] font-semibold flex items-center justify-center">3</span>
+</button>
+<button class="flex-1 py-2 rounded-full font-label-md text-label-md text-center text-on-surface-variant hover:text-on-surface transition-all duration-200 flex items-center justify-center gap-1.5" id="tab-connected">
+<span>Connected</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface-variant text-[11px]">18</span>
+</button>
+<button class="flex-1 py-2 rounded-full font-label-md text-label-md text-center text-on-surface-variant hover:text-on-surface transition-all duration-200 flex items-center justify-center gap-1.5" id="tab-sent">
+<span>Sent</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface-variant text-[11px]">5</span>
+</button>
+</div>
+<!-- Active Tab Content: Requests -->
+<div class="flex flex-col space-y-space-md" id="section-requests">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Incoming Requests (3)</span>
+<button class="font-label-sm text-label-sm text-on-surface hover:underline font-medium">Clear all</button>
+</div>
+<!-- Request Card 1 -->
+<div class="p-4 rounded-2xl bg-surface-container-lowest border border-outline-variant/50 shadow-sm flex flex-col gap-space-sm transition-all duration-200 hover:shadow-md">
+<div class="flex items-start gap-3">
+<div class="relative shrink-0">
+<img class="w-14 h-14 rounded-full object-cover shadow-sm grayscale" data-alt="Warm natural portrait of Meera Sen, smiling warmly in a sunlit art studio with warm terracotta tones and gentle greenery in the soft background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyR8yi_iWMhOftAo05z6AhuHiDIp7TtWW7fn7Q8fnGp3zdxFEPHaZLL_XWWMWtUfz5WuLn66QilBvvI7JRUQwipmkvkizUcrZrNxR-dOPbi8NFrn78w22W0hCFAyu9TEd-Iff7MiGL2659bInAUegaoxQ4R75qD9UeleaH2cG2CzZ6DyRl60AwP_UL8PRXnLJEw7C_ByAOi9QUyJmXCPc68m5RFykXg35HjhBWIsJtgfPd9A7rsb5K"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-primary ring-2 ring-white"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-[17px] leading-snug font-semibold text-on-surface truncate">Meera Sen, 29</h3>
+<span class="font-body-md text-[13px] text-on-surface-variant shrink-0">2h ago</span>
+</div>
+<p class="font-body-md text-[13px] text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-on-surface-variant">location_on</span>
+<span>Indiranagar · 0.8 km away</span>
+</p>
+<div class="flex flex-wrap gap-1.5 mt-2">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 border border-outline-variant/40">
+<span class="material-symbols-outlined text-[14px]">draw</span>
+<span>Figma · Design Systems</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-11 rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>Accept</span>
+</button>
+<button class="h-11 px-5 rounded-full border border-outline-variant bg-surface-container-lowest text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container-low transition-colors active:scale-[0.98]">
+          Ignore
+        </button>
+</div>
+</div>
+<!-- Request Card 2 -->
+<div class="p-4 rounded-2xl bg-surface-container-lowest border border-outline-variant/50 shadow-sm flex flex-col gap-space-sm transition-all duration-200 hover:shadow-md">
+<div class="flex items-start gap-3">
+<div class="relative shrink-0">
+<img class="w-14 h-14 rounded-full object-cover shadow-sm grayscale" data-alt="Candid photograph of Karan Varma, wearing a warm rust linen shirt holding a pour-over kettle in a cozy warm cafe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYQ91uYNPZ7RWhhBVwxzeQhJVlK4ABXqwhz0OWE4gdjrhuMVLSAll1YfAHP4NwxUS4qMn5kM8ScUBvOz5MC5nFsmyOFpzDgDwXNTbnXoWcpa3QkObW8_fJXIYO6SyauwQ0g9NcdnTy30PJGLRhPHRUePbHmBEk3aRxeOn1KSX8_3uGQCjGL3kObkcCayqXc8TM-nzzE4NkWYAxeiovidzG1TEA_8B0uIUvwdw_-I6qt4Q5IWKE5QOB"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-primary ring-2 ring-white"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-[17px] leading-snug font-semibold text-on-surface truncate">Karan Varma, 32</h3>
+<span class="font-body-md text-[13px] text-on-surface-variant shrink-0">Yesterday</span>
+</div>
+<p class="font-body-md text-[13px] text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-on-surface-variant">location_on</span>
+<span>Koramangala · 1.4 km away</span>
+</p>
+<div class="flex flex-wrap gap-1.5 mt-2">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 border border-outline-variant/40">
+<span class="material-symbols-outlined text-[14px]">coffee</span>
+<span>Specialty Coffee · Bouldering</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-11 rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>Accept</span>
+</button>
+<button class="h-11 px-5 rounded-full border border-outline-variant bg-surface-container-lowest text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container-low transition-colors active:scale-[0.98]">
+          Ignore
+        </button>
+</div>
+</div>
+<!-- Request Card 3 -->
+<div class="p-4 rounded-2xl bg-surface-container-lowest border border-outline-variant/50 shadow-sm flex flex-col gap-space-sm transition-all duration-200 hover:shadow-md">
+<div class="flex items-start gap-3">
+<div class="relative shrink-0">
+<img class="w-14 h-14 rounded-full object-cover shadow-sm grayscale" data-alt="Portrait of Tara Sharma looking cheerfully outdoors in a green botanical garden patio, natural daylight and soft bokeh." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRLQFoo_hh8hB27T2jUo86vn_75QWQmREt-RMTo3r4D3OGkQW-IM2zGkDRuofAOfzwmLMcETI3QwXrb4f1OEnOObYGaOO7Ydup_KcgRmnr27gcYSj7DP4gts5vC4klhlCLKejxAWiS3mBq0ZdndpjNdE2JId4oOjKigkxqBdjpPHS_Ow5ow-Knr5fVBc0Tp_XUnnQKQDeIpCRDy_wpz0P1cyr6kAJ42kM3eJ0kdByADYIxQW-LGbqe"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-surface-dim ring-2 ring-white"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-[17px] leading-snug font-semibold text-on-surface truncate">Tara Sharma, 26</h3>
+<span class="font-body-md text-[13px] text-on-surface-variant shrink-0">2d ago</span>
+</div>
+<p class="font-body-md text-[13px] text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-on-surface-variant">location_on</span>
+<span>Lavelle Road · 2.1 km away</span>
+</p>
+<div class="flex flex-wrap gap-1.5 mt-2">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 border border-outline-variant/40">
+<span class="material-symbols-outlined text-[14px]">lightbulb</span>
+<span>Product Management</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-11 rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>Accept</span>
+</button>
+<button class="h-11 px-5 rounded-full border border-outline-variant bg-surface-container-lowest text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container-low transition-colors active:scale-[0.98]">
+          Ignore
+        </button>
+</div>
+</div>
+</div>
+<!-- Connected & Sent Previews Mosaic Section -->
+<div class="flex flex-col space-y-space-md pt-2">
+<!-- Recently Connected Sub-section -->
+<div class="flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px] text-on-surface">group</span>
+<h2 class="font-headline-md text-[17px] font-semibold text-on-surface">Recently Connected</h2>
+</div>
+<a class="font-label-md text-label-md text-on-surface font-medium flex items-center gap-0.5 hover:underline" href="#">
+<span>See all 18</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container-lowest border border-outline-variant/50 shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3 min-w-0">
+<img class="w-12 h-12 rounded-full object-cover shrink-0 grayscale" data-alt="Portrait of Rohan Dev smiling gently against a clean architectural concrete background with subtle warm wood accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb1EcNCYAOpgTdAk-8LS6RceYC4aA1qhvxXrXYi0E3VpddGrPCpdMPWFUR7xWJ6yNgJAU4xjFOjx5k6KkL7qNpfjDivPzZ-Ix4x35f2-3D3nlo5dDr7hQT5seuMHaKJFIueaqGCoYteJreOkKaMBH-iXUEvWNj6dzauj4p_o_SxZOjA3XPf0AvURPXOdRHylEMcKnF6HfTrHES8qSJJpOc1Kle8jnMgoRWuUE3eca6erbOSaFTyDHh"/>
+<div class="min-w-0">
+<h4 class="font-headline-md text-[16px] font-semibold text-on-surface truncate">Rohan Dev</h4>
+<p class="font-body-md text-[13px] text-on-surface-variant truncate">Connected 3h ago · Pottery &amp; Ceramics</p>
+</div>
+</div>
+<button aria-label="Message Rohan" class="w-11 h-11 rounded-full bg-surface-container text-on-surface flex items-center justify-center shrink-0 hover:bg-surface-container-highest transition-colors active:scale-95 border border-outline-variant/40">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</button>
+</div>
+</div>
+<!-- Outgoing Sent Request Preview -->
+<div class="flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px] text-on-surface">outbox</span>
+<h2 class="font-headline-md text-[17px] font-semibold text-on-surface">Sent Requests</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">5 pending</span>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container-lowest border border-outline-variant/50 shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3 min-w-0">
+<img class="w-12 h-12 rounded-full object-cover shrink-0 grayscale" data-alt="Warm portrait of Ananya Roy in a cozy workshop with soft natural ambient morning lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHrNs8BSe4L8RuvH_SJKYPqlG-7LY7vKRTKv20-ER22hP7Mrqg7eVh8capne2j4tLaCymVw8K664cyP0-jr4C7RukR-sVtjypSzcDp46qfaN_tD6W_JF8gqnjBxkm8sCEaZjKByUFFhIExoZONj4akxq00BFFR8LRg6zWxaj9AqK2z_6VVephDCl4oyv3UnMEryENm9ssMOgJ7VVaN9upF5Ieis3Hb5f4QPpE9GHXS8g89JZjo7mSn"/>
+<div class="min-w-0">
+<h4 class="font-headline-md text-[16px] font-semibold text-on-surface truncate">Ananya Roy</h4>
+<p class="font-body-md text-[13px] text-on-surface-variant truncate">Sent yesterday · Urban Gardening</p>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1 shrink-0 border border-outline-variant/40">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Pending</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Friendly Neighborhood Prompt Card -->
+<div class="p-4 rounded-2xl bg-surface-container border border-outline-variant/40 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[26px]">connect_without_contact</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="font-label-md text-label-md text-on-surface font-semibold">Grow your local circle</p>
+<p class="font-body-md text-[13px] text-on-surface-variant">Introduce yourself to neighbors who share your skills and passions.</p>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const tabs = [
+      { btn: document.getElementById('tab-requests'), id: 'requests' },
+      { btn: document.getElementById('tab-connected'), id: 'connected' },
+      { btn: document.getElementById('tab-sent'), id: 'sent' }
+    ];
+
+    tabs.forEach(({ btn }) => {
+      if (!btn) return;
+      btn.addEventListener('click', () => {
+        tabs.forEach(t => {
+          t.btn.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+          t.btn.classList.add('text-on-surface-variant');
+          const badge = t.btn.querySelector('span:last-child');
+          if (badge) {
+            badge.classList.remove('bg-white/20', 'text-white');
+            badge.classList.add('bg-surface-container-highest', 'text-on-surface-variant');
+          }
+        });
+        btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+        btn.classList.remove('text-on-surface-variant');
+        const activeBadge = btn.querySelector('span:last-child');
+        if (activeBadge) {
+          activeBadge.classList.add('bg-white/20', 'text-white');
+          activeBadge.classList.remove('bg-surface-container-highest', 'text-on-surface-variant');
+        }
+      });
+    });
+
+    // Simple interaction for Accept buttons
+    document.querySelectorAll('button').forEach(button => {
+      if (button.textContent.trim().includes('Accept')) {
+        button.addEventListener('click', (e) => {
+          const card = e.currentTarget.closest('.p-4');
+          if (card) {
+            button.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span><span>Connected!</span>';
+            button.classList.remove('bg-primary');
+            button.classList.add('bg-secondary');
+            setTimeout(() => {
+              card.style.opacity = '0.5';
+              card.style.pointerEvents = 'none';
+            }, 300);
+          }
+        });
+      }
+    });
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl border-t border-surface-container" data-active-classes="text-primary"><div class="h-16 px-space-xs flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] gap-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="discover" href="#"><span class="material-symbols-outlined text-[24px]">explore</span><span class="font-label-sm text-label-sm">Discover</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] gap-1 transition-colors text-primary font-semibold" data-path="connections" href="#"><span class="material-symbols-outlined text-[24px]">diversity_3</span><span class="font-label-sm text-label-sm">Connections</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] gap-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="chat" href="#"><span class="material-symbols-outlined text-[24px]">chat_bubble</span><span class="font-label-sm text-label-sm">Chat</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] gap-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="profile" href="#"><span class="material-symbols-outlined text-[24px]">account_circle</span><span class="font-label-sm text-label-sm">Profile</span></a></div></nav></body></html>

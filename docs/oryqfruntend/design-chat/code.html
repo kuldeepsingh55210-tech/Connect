@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-surface": "#1a1c1d",
+          "on-primary-fixed": "#1b1b1e",
+          "surface-container": "#eeeeef",
+          "outline": "#77767b",
+          "tertiary-fixed": "#e8e2d9",
+          "surface-container-highest": "#e2e2e3",
+          "on-primary-fixed-variant": "#47464a",
+          "on-error": "#ffffff",
+          "on-secondary-fixed": "#1a1b22",
+          "background": "#f9f9fa",
+          "surface-bright": "#f9f9fa",
+          "primary-fixed": "#e4e1e6",
+          "tertiary-fixed-dim": "#cbc6bd",
+          "on-secondary-fixed-variant": "#46464e",
+          "secondary-fixed-dim": "#c6c5cf",
+          "surface-dim": "#dadadb",
+          "surface": "#f9f9fa",
+          "on-primary": "#ffffff",
+          "on-background": "#1a1c1d",
+          "on-tertiary": "#ffffff",
+          "on-primary-container": "#858387",
+          "secondary-fixed": "#e3e1ec",
+          "primary-container": "#1b1b1e",
+          "outline-variant": "#c8c5cb",
+          "inverse-primary": "#c8c5ca",
+          "on-error-container": "#93000a",
+          "error": "#ba1a1a",
+          "inverse-surface": "#2f3132",
+          "primary": "#000000",
+          "surface-tint": "#5f5e61",
+          "tertiary-container": "#1d1b16",
+          "on-tertiary-fixed-variant": "#494640",
+          "on-secondary-container": "#63646c",
+          "secondary-container": "#e3e1ec",
+          "surface-variant": "#e2e2e3",
+          "inverse-on-surface": "#f0f1f2",
+          "primary-fixed-dim": "#c8c5ca",
+          "error-container": "#ffdad6",
+          "surface-container-lowest": "#ffffff",
+          "surface-container-low": "#f3f3f4",
+          "surface-container-high": "#e8e8e9",
+          "on-secondary": "#ffffff",
+          "on-surface-variant": "#47464b",
+          "on-tertiary-container": "#88837c",
+          "on-tertiary-fixed": "#1d1b16",
+          "secondary": "#5d5e66",
+          "tertiary": "#000000"
+        },
+        "borderRadius": {
+          "DEFAULT": "1rem",
+          "lg": "2rem",
+          "xl": "3rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xl": "2.5rem",
+          "gutter": "1.5rem",
+          "space-sm": "0.5rem",
+          "gutter-mobile": "1rem",
+          "space-lg": "1.5rem",
+          "space-xs": "0.25rem",
+          "space-md": "1rem",
+          "margin": "3rem",
+          "margin-mobile": "1.25rem",
+          "space-4xl": "3.5rem"
+        },
+        "fontFamily": {
+          "body-lg": [
+            "Inter"
+          ],
+          "display-lg-mobile": [
+            "Inter"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "Inter"
+          ],
+          "headline-lg-mobile": [
+            "Inter"
+          ],
+          "headline-md": [
+            "Inter"
+          ],
+          "headline-sm": [
+            "Inter"
+          ],
+          "display-lg": [
+            "Inter"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ]
+        },
+        "fontSize": {
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "26px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-lg-mobile": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg-mobile": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-sm": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "display-lg": [
+            "56px",
+            {
+              "lineHeight": "64px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      }
+    }
+  }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl border-b border-surface-container-highest"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span></button><img alt="ConnectLocal Wordmark Logo" class="h-8 w-auto object-contain grayscale" src="https://lh3.googleusercontent.com/aida/AEtjO1XW3ZJFgLk0YD8xPRstaLWtDZIz4LrKVR7P4xb2tCTjgBJWBM9Ogq_Zd0BFVZPQiHi5ovioBdqZF-lPWy3EW4se-IzsEkzGS52jTTseu_8FOQ7gTRyEfY0E8TtE7cvPCI-QiT2SQ2bSRDbujkv97opaWjEXdFP0EUzVSm4tuT5mVsLUPOhXoLYd4m5NWiP1rdYpTIRMsb4XbOm8mC2oINUB-gSYSwGe-Y82s8UJhRgihb9fJlZb37kRNTI"/><h1 class="font-headline-sm text-headline-sm text-on-surface">Conversation View</h1></div><div class="flex items-center gap-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhFmUkWXmY23QYPfG2fOMwiBkoohneFpFxf9Jouy9YNI2hKQmaOnjO9RQARAG0qBmsL_APp1PeFsy9oK0M83-KyArZre372io1x3o0MgnKk_Nx1Nkje_A3m26P12hd_Sct2T9AvlXbCd6i-qtYn2vtEmx-nOwsnyriqjnbSb6MBAah765c8EKU9odweuQj_jWh-z4dJOBUPIalqbatlcRp0L66RUjHLeBzwFmqjFDHmKF1E54qiy1P"/></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface flex-1"><div class="flex flex-col w-full min-w-0">
+<div class="px-margin-mobile py-space-sm bg-surface-container-lowest border-b border-surface-container-high flex items-center justify-between sticky top-0 z-30">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative flex-shrink-0">
+<img class="w-11 h-11 rounded-full object-cover shadow-sm grayscale" data-alt="Close-up outdoor portrait of Aarav Patel, a smiling 28-year-old Indian UX designer wearing a terracotta rust sweater in soft morning Delhi sunlight, authentic film texture and warm comforting tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJOLLl009HY_50KCk7TryhEFUb3ItzsWqzJLYvdw2u8Ke6wJOrNPH_6Qh21Cugk37sijxBXqRf2y752kj78fukfKUtLKbzKod6c8_zpdZNtuxyhJWnDPpVTvlh3MlRDcqgpixWA8w7JsXl1cja3Q3n2vExz4nkWAmApVbEMMDkHN6Ws2cVjUppwbTcD3sbr4VE-4Ouda6wXlIdh_LoTqYau8SHCXa-YrHrYJ3LPVTy8T01LCxiEM1P"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-primary rounded-full ring-2 ring-surface-container-lowest"></span>
+</div>
+<button class="flex flex-col text-left min-w-0 focus:outline-none" type="button">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Aarav Patel</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-medium truncate flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span>
+          Active in Hauz Khas, Delhi
+        </span>
+</button>
+</div>
+<div class="relative">
+<button aria-label="Thread options" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low active:bg-surface-container transition-colors" id="chatMenuTrigger">
+<span class="material-symbols-outlined text-[22px]">more_vert</span>
+</button>
+<!-- Dropdown Menu Sheet -->
+<div class="hidden absolute right-0 mt-2 w-48 bg-surface-container-lowest rounded-xl shadow-xl border border-surface-container-high py-space-xs z-50 transition-all" id="chatOptionsMenu">
+<button class="w-full px-space-md py-space-xs text-left font-label-md text-label-md text-on-surface hover:bg-surface-container-low flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">person</span>
+          View Profile
+        </button>
+<button class="w-full px-space-md py-space-xs text-left font-label-md text-label-md text-on-surface hover:bg-surface-container-low flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">notifications_off</span>
+          Mute Updates
+        </button>
+<div class="h-px bg-surface-container-highest my-1 mx-2"></div>
+<button class="w-full px-space-md py-space-xs text-left font-label-md text-label-md text-on-surface hover:bg-surface-container-low flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">flag</span>
+          Report Connection
+        </button>
+<button class="w-full px-space-md py-space-xs text-left font-label-md text-label-md text-on-surface hover:bg-surface-container-low flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">person_remove</span>
+          Unmatch &amp; Block
+        </button>
+</div>
+</div>
+</div>
+<!-- Messages Content Area -->
+<div class="flex flex-col px-margin-mobile pt-space-md pb-space-4xl gap-space-md" id="messageStream">
+<!-- Intro Celebration Card -->
+<div class="flex flex-col items-center justify-center my-space-xs text-center">
+<div class="inline-flex items-center gap-1.5 px-space-md py-1 rounded-full bg-surface-container-high border border-outline-variant/40 shadow-sm text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-base grayscale">🤝</span>
+<span>You're connected! Say hello to your neighbor</span>
+</div>
+<span class="mt-2 font-body-sm text-body-sm text-outline">Today · 10:18 AM</span>
+</div>
+<!-- Incoming Bubble 1 -->
+<div class="flex items-end gap-space-xs max-w-[85%] self-start">
+<img class="w-7 h-7 rounded-full object-cover flex-shrink-0 mb-1 grayscale" data-alt="Small thumbnail avatar of Aarav Patel with soft natural ambient background lighting, Delhi neighborhood setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_-Mrkyqw7A70F6-a5FQ0m4LAmq-PLnFIyn14XIh3TYT5iWU9f_qq4aQH2Gym1hKtPP9cMXumDBJpL-vnl4oh4NbK_x7sYgCGg2ineBBgUP7LubTcrTqaDtMoQYHHZNNJaHo0tg1m2YjIhXa1iZCqWfeYWU1jD9OOQZBWjgxeuKm1EQjYViqYJdbkAQNENr7z4rY-I1TsiobeJ8WDnRzrGwmGtP-LWVeVqq3wRVyfwdtVxW2c_l4dS"/>
+<div class="flex flex-col gap-1">
+<div class="bg-surface-container-lowest border border-outline-variant/50 text-on-surface rounded-[18px] rounded-bl-sm p-space-md shadow-sm">
+<p class="font-body-md text-body-md leading-relaxed">
+            Hey! Great connecting with someone passionate about community-led public spaces in South Delhi. 👋
+          </p>
+</div>
+</div>
+</div>
+<!-- Outgoing Bubble 1 -->
+<div class="flex flex-col items-end gap-1 max-w-[85%] self-end">
+<div class="bg-primary text-on-primary rounded-[18px] rounded-br-sm p-space-md shadow-sm">
+<p class="font-body-md text-body-md leading-relaxed">
+          Hey Aarav! Loved your recent case study on local community interfaces. The focus on hyper-local trust was brilliant.
+        </p>
+</div>
+<span class="font-body-sm text-body-sm text-outline px-1">10:22 AM · Delivered</span>
+</div>
+<!-- Incoming Bubble 2 -->
+<div class="flex items-end gap-space-xs max-w-[85%] self-start">
+<img class="w-7 h-7 rounded-full object-cover flex-shrink-0 mb-1 grayscale" data-alt="Thumbnail of Aarav Patel smiling warmly, soft portrait photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdJSNJ8R0M-lT5oBDteCmjV3asC_08ZVvDp3Nw2XfnfRLwHDEG4Myhr1HMQPbkpPbcjw_UtEvU3kG_OqtJqnWc2_-bnlpZQs1GfO0P7pgeyhXqAJqiWndatHIoBrQPcvPW4GRgRMVFk3xjWb283GBIEgjkh5N8oB7slHPmS6UGcEA_mtxMFuc_7Ya0OT704_fKuVpyeyjHzX1ZXyAvOZbfRbBWV1VPCGwz7y1_ztpc5fIoILKgfFXS"/>
+<div class="flex flex-col gap-1">
+<div class="bg-surface-container-lowest border border-outline-variant/50 text-on-surface rounded-[18px] rounded-bl-sm p-space-md shadow-sm">
+<p class="font-body-md text-body-md leading-relaxed">
+            Thanks so much! Would love to bounce some ideas on local network design whenever you have 20 mins.
+          </p>
+</div>
+<span class="font-body-sm text-body-sm text-outline px-1">10:23 AM</span>
+</div>
+</div>
+<!-- Outgoing Bubble 2 -->
+<div class="flex flex-col items-end gap-1 max-w-[85%] self-end">
+<div class="bg-primary text-on-primary rounded-[18px] rounded-br-sm p-space-md shadow-sm">
+<p class="font-body-md text-body-md leading-relaxed">
+          Sounds great! Are you free for a coffee around Hauz Khas this Thursday?
+        </p>
+</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-outline px-1">
+<span>10:24 AM</span>
+<span class="material-symbols-outlined text-[15px] text-primary">done_all</span>
+</div>
+</div>
+<!-- Neighborhood Suggestion Pill -->
+<div class="mx-auto my-space-xs">
+<button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-highest border border-outline-variant text-on-surface hover:bg-surface-container-high transition-all shadow-sm active:scale-95" onclick="appendQuickPrompt('Blue Tokai Hauz Khas at 4 PM?')" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-surface">local_cafe</span>
+<span class="font-label-sm text-label-sm font-medium">Suggest: Blue Tokai, Hauz Khas (4 PM)</span>
+</button>
+</div>
+<!-- Interactive New Messages Slot -->
+<div class="flex flex-col gap-space-md" id="dynamicMessages"></div>
+</div>
+<!-- Sticky Bottom Input Deck -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest border-t border-surface-container-highest shadow-sm pb-safe">
+<form class="px-margin-mobile py-space-sm flex items-center gap-space-xs max-w-2xl mx-auto" id="chatForm" onsubmit="event.preventDefault(); handleSend();">
+<button aria-label="Add photo or location" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all flex-shrink-0" type="button">
+<span class="material-symbols-outlined text-[24px]">add_circle</span>
+</button>
+<div class="flex-1 relative flex items-center">
+<input autocomplete="off" class="w-full h-11 pl-space-md pr-space-xl bg-surface-container-low border border-surface-container-highest text-on-surface placeholder:text-outline rounded-full font-body-md text-body-md focus:outline-none focus:bg-surface-container focus:border-outline transition-all" id="chatInput" placeholder="Type a message..." type="text"/>
+<button aria-label="Insert emoji" class="absolute right-2.5 text-secondary hover:text-on-surface flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[20px]">sentiment_satisfied</span>
+</button>
+</div>
+<button aria-label="Send message" class="w-11 h-11 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-md active:scale-90 hover:bg-primary-container transition-all flex-shrink-0" id="sendButton" type="submit">
+<span class="material-symbols-outlined text-[20px] ml-0.5">send</span>
+</button>
+</form>
+</div>
+</div>
+<script>
+  // Options menu toggle
+  const menuBtn = document.getElementById('chatMenuTrigger');
+  const menuDropdown = document.getElementById('chatOptionsMenu');
+
+  menuBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    menuDropdown?.classList.toggle('hidden');
+  });
+
+  document.addEventListener('click', () => {
+    if (!menuDropdown?.classList.contains('hidden')) {
+      menuDropdown?.classList.add('hidden');
+    }
+  });
+
+  // Quick action suggestion tap
+  function appendQuickPrompt(text) {
+    const input = document.getElementById('chatInput');
+    if (input) {
+      input.value = text;
+      input.focus();
+    }
+  }
+
+  // Handle local send
+  function handleSend() {
+    const input = document.getElementById('chatInput');
+    const text = input?.value.trim();
+    if (!text) return;
+
+    const dynamicZone = document.getElementById('dynamicMessages');
+    if (!dynamicZone) return;
+
+    const now = new Date();
+    const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+    const newBubble = document.createElement('div');
+    newBubble.className = 'flex flex-col items-end gap-1 max-w-[85%] self-end animate-fade-in';
+    newBubble.innerHTML = `
+      <div class="bg-primary text-on-primary rounded-[18px] rounded-br-sm p-space-md shadow-sm">
+        <p class="font-body-md text-body-md leading-relaxed">${escapeHtml(text)}</p>
+      </div>
+      <div class="flex items-center gap-1 font-body-sm text-body-sm text-outline px-1">
+        <span>${timeString}</span>
+        <span class="material-symbols-outlined text-[15px] text-outline">done</span>
+      </div>
+    `;
+
+    dynamicZone.appendChild(newBubble);
+    input.value = '';
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+
+    // Mock reciprocal micro-feedback
+    setTimeout(() => {
+      const readIcon = newBubble.querySelector('.material-symbols-outlined');
+      if (readIcon) {
+        readIcon.textContent = 'done_all';
+        readIcon.className = 'material-symbols-outlined text-[15px] text-primary';
+      }
+    }, 1200);
+  }
+
+  function escapeHtml(str) {
+    return str
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+</script></main></body></html>

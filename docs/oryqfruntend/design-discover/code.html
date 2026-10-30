@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "on-surface": "#1a1c1d",
+        "on-primary-fixed": "#1b1b1e",
+        "surface-container": "#eeeeef",
+        "outline": "#77767b",
+        "tertiary-fixed": "#e8e2d9",
+        "surface-container-highest": "#e2e2e3",
+        "on-primary-fixed-variant": "#47464a",
+        "on-error": "#ffffff",
+        "on-secondary-fixed": "#1a1b22",
+        "background": "#f9f9fa",
+        "surface-bright": "#f9f9fa",
+        "primary-fixed": "#e4e1e6",
+        "tertiary-fixed-dim": "#cbc6bd",
+        "on-secondary-fixed-variant": "#46464e",
+        "secondary-fixed-dim": "#c6c5cf",
+        "surface-dim": "#dadadb",
+        "surface": "#f9f9fa",
+        "on-primary": "#ffffff",
+        "on-background": "#1a1c1d",
+        "on-tertiary": "#ffffff",
+        "on-primary-container": "#858387",
+        "secondary-fixed": "#e3e1ec",
+        "primary-container": "#1b1b1e",
+        "outline-variant": "#c8c5cb",
+        "inverse-primary": "#c8c5ca",
+        "on-error-container": "#93000a",
+        "error": "#ba1a1a",
+        "inverse-surface": "#2f3132",
+        "primary": "#000000",
+        "surface-tint": "#5f5e61",
+        "tertiary-container": "#1d1b16",
+        "on-tertiary-fixed-variant": "#494640",
+        "on-secondary-container": "#63646c",
+        "secondary-container": "#e3e1ec",
+        "surface-variant": "#e2e2e3",
+        "inverse-on-surface": "#f0f1f2",
+        "primary-fixed-dim": "#c8c5ca",
+        "error-container": "#ffdad6",
+        "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f3f3f4",
+        "surface-container-high": "#e8e8e9",
+        "on-secondary": "#ffffff",
+        "on-surface-variant": "#47464b",
+        "on-tertiary-container": "#88837c",
+        "on-tertiary-fixed": "#1d1b16",
+        "secondary": "#5d5e66",
+        "tertiary": "#000000"
+      },
+      borderRadius: {
+        "DEFAULT": "1rem",
+        "lg": "2rem",
+        "xl": "3rem",
+        "full": "9999px"
+      },
+      spacing: {
+        "space-xl": "2.5rem",
+        "gutter": "1.5rem",
+        "space-sm": "0.5rem",
+        "gutter-mobile": "1rem",
+        "space-lg": "1.5rem",
+        "space-xs": "0.25rem",
+        "space-md": "1rem",
+        "margin": "3rem",
+        "margin-mobile": "1.25rem",
+        "card-padding": "1.25rem"
+      },
+      fontFamily: {
+        "body-lg": ["Inter"],
+        "display-lg-mobile": ["Inter"],
+        "label-md": ["Inter"],
+        "label-sm": ["Inter"],
+        "headline-lg": ["Inter"],
+        "headline-lg-mobile": ["Inter"],
+        "headline-md": ["Inter"],
+        "display-lg": ["Inter"],
+        "body-md": ["Inter"],
+        "headline-sm": ["Inter"],
+        "body-sm": ["Inter"],
+        "label-lg": ["Inter"]
+      },
+      fontSize: {
+        "body-lg": ["16px", { lineHeight: "26px", letterSpacing: "-0.005em", fontWeight: "400" }],
+        "display-lg-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "600" }],
+        "label-md": ["13px", { lineHeight: "18px", letterSpacing: "0.01em", fontWeight: "500" }],
+        "label-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.06em", fontWeight: "600" }],
+        "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "600" }],
+        "headline-lg-mobile": ["24px", { lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "600" }],
+        "headline-md": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "500" }],
+        "headline-sm": ["18px", { lineHeight: "24px", fontWeight: "600" }],
+        "display-lg": ["56px", { lineHeight: "64px", letterSpacing: "-0.03em", fontWeight: "600" }],
+        "body-md": ["14px", { lineHeight: "22px", letterSpacing: "0em", fontWeight: "400" }],
+        "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }],
+        "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }]
+      }
+    }
+  }
+};</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl border-b border-surface-container-highest/60"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="ConnectLocal Wordmark Logo" class="h-8 w-auto object-contain grayscale" src="https://lh3.googleusercontent.com/aida/AEtjO1XW3ZJFgLk0YD8xPRstaLWtDZIz4LrKVR7P4xb2tCTjgBJWBM9Ogq_Zd0BFVZPQiHi5ovioBdqZF-lPWy3EW4se-IzsEkzGS52jTTseu_8FOQ7gTRyEfY0E8TtE7cvPCI-QiT2SQ2bSRDbujkv97opaWjEXdFP0EUzVSm4tuT5mVsLUPOhXoLYd4m5NWiP1rdYpTIRMsb4XbOm8mC2oINUB-gSYSwGe-Y82s8UJhRgihb9fJlZb37kRNTI"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Discover</span></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[24px]">notifications</span></button><a class="w-11 h-11 flex items-center justify-center" data-path="profile" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhFmUkWXmY23QYPfG2fOMwiBkoohneFpFxf9Jouy9YNI2hKQmaOnjO9RQARAG0qBmsL_APp1PeFsy9oK0M83-KyArZre372io1x3o0MgnKk_Nx1Nkje_A3m26P12hd_Sct2T9AvlXbCd6i-qtYn2vtEmx-nOwsnyriqjnbSb6MBAah765c8EKU9odweuQj_jWh-z4dJOBUPIalqbatlcRp0L66RUjHLeBzwFmqjFDHmKF1E54qiy1P"/></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface flex-1"><div class="flex flex-col w-full">
+<!-- Interactive Top Sub-Bar & Location Selector -->
+<div class="px-margin-mobile pt-space-xs pb-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface border border-outline-variant/60 hover:bg-surface-container transition-colors active:scale-95 duration-150" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="font-label-md text-label-md font-semibold">Delhi NCR</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">expand_more</span>
+</button>
+<span class="text-outline-variant text-[12px]">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">34 peers online</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button aria-label="Filter peers" class="w-9 h-9 rounded-full bg-surface-container-low border border-outline-variant/60 flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Warm Community Welcome Prompt (Monochrome Minimalist) -->
+<div class="px-margin-mobile mb-space-md">
+<div class="p-card-padding rounded-2xl bg-surface-container-lowest border border-surface-container-highest shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Curated Discovery</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-0.5 font-bold">Meet makers around you</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Craftspeople, designers &amp; devs in your local circle</p>
+</div>
+<div class="w-11 h-11 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[22px]">group_add</span>
+</div>
+</div>
+</div>
+<!-- Section 1: Same city, same skill -->
+<section class="flex flex-col mb-space-xl">
+<div class="px-margin-mobile flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Same city, same skill</h3>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:text-on-surface-variant font-semibold underline underline-offset-4">See all (14)</button>
+</div>
+<p class="px-margin-mobile font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Designers and craft leads living within 10 km</p>
+<!-- Horizontal Scroll Carousel -->
+<div class="flex gap-space-sm overflow-x-auto px-margin-mobile pb-space-xs no-scrollbar snap-x snap-mandatory">
+<!-- Card 1 -->
+<div class="min-w-[240px] max-w-[240px] snap-start rounded-2xl bg-surface-container-lowest border border-surface-container-highest p-card-padding shadow-[0_2px_8px_rgba(0,0,0,0.04)] flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between mb-space-sm">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover shadow-sm grayscale" data-alt="Warm natural portrait of Aarav Patel, a 27-year-old Indian male product designer with friendly expression, soft terracotta studio lighting, crisp focus and casual linen shirt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhY7648Vi9E12BHNYG9Hiq5zVxRoZaWlTkVoLCROlNasBGT8VyGd8UdoZe20oTjMuaTP21nr6nrngEQCsvTQA-xjxzrPmHRo9Q7XwYy28HrAIf4KaFuomYz4EbyT3sf4inMTXWaQgAbDWZoPh-vcQ4WlIDswCC9m7IjiS3qesED2zmzFdiSHQeg-DeqGn-0qgu1DgF-dM-gRu-T5mL1Dj0r-B1SutsdrhtONyFVEywSx-2dt9uXxrO"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-primary ring-2 ring-surface-container-lowest"></span>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface text-[11px] font-semibold border border-surface-container-highest">
+<span class="material-symbols-outlined text-[12px]">auto_awesome</span>
+              3 shared
+            </span>
+</div>
+<div class="flex flex-col mb-space-xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold">Aarav Patel, 27</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[13px] text-on-surface">near_me</span>
+              Hauz Khas • 2.4 km
+            </span>
+</div>
+<!-- Interest Tags -->
+<div class="flex flex-wrap gap-1.5 my-space-sm">
+<span class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm">Product Design</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant border border-surface-container-highest font-label-sm text-label-sm">Figma</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant border border-surface-container-highest font-label-sm text-label-sm">Woodcraft</span>
+</div>
+</div>
+<button class="connect-btn mt-space-xs w-full py-2.5 px-4 rounded-full bg-primary text-on-primary hover:bg-neutral-800 transition-all duration-200 font-label-md text-label-md flex items-center justify-center gap-1.5 active:scale-95" onclick="toggleConnect(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>Connect</span>
+</button>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[240px] max-w-[240px] snap-start rounded-2xl bg-surface-container-lowest border border-surface-container-highest p-card-padding shadow-[0_2px_8px_rgba(0,0,0,0.04)] flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between mb-space-sm">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover shadow-sm grayscale" data-alt="Portrait of Meera Sen, a 29-year-old UI researcher wearing eyeglasses, warm natural lighting, warm terracotta clay pottery studio background, genuine relaxed smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE2ltnXn6GXgl3YU9dcp0t2wCAVo0ArO1Hh94-nX99p5awbBpeiCVCcX2s9Had_9CTC_X7IoAyULOhK36K4nEINv9VfDF9TfFkqIJGvPGqWqV1GuchWT_Lo-EdB-n_rn9tq0skE-tzE1CVBfbKTBK91hqS3kyvZFiSg_N9Rh3-7ETngvS7XI49GH5sDOZlSsXfCCD0H8b7qAx0pekcl6NANR0APyEMK0L3ZnQNT2v4v55NFUMej1Cf"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-primary ring-2 ring-surface-container-lowest"></span>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface text-[11px] font-semibold border border-surface-container-highest">
+<span class="material-symbols-outlined text-[12px]">auto_awesome</span>
+              2 shared
+            </span>
+</div>
+<div class="flex flex-col mb-space-xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold">Meera Sen, 29</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[13px] text-on-surface">near_me</span>
+              Defence Colony • 4.1 km
+            </span>
+</div>
+<!-- Interest Tags -->
+<div class="flex flex-wrap gap-1.5 my-space-sm">
+<span class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm">Design Systems</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant border border-surface-container-highest font-label-sm text-label-sm">User Research</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant border border-surface-container-highest font-label-sm text-label-sm">Ceramics</span>
+</div>
+</div>
+<button class="connect-btn mt-space-xs w-full py-2.5 px-4 rounded-full bg-primary text-on-primary hover:bg-neutral-800 transition-all duration-200 font-label-md text-label-md flex items-center justify-center gap-1.5 active:scale-95" onclick="toggleConnect(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>Connect</span>
+</button>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[240px] max-w-[240px] snap-start rounded-2xl bg-surface-container-lowest border border-surface-container-highest p-card-padding shadow-[0_2px_8px_rgba(0,0,0,0.04)] flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between mb-space-sm">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover shadow-sm grayscale" data-alt="Portrait of Kabir Verma, a 26-year-old creative developer holding artisan coffee in an organic minimal cafe space, soft golden ambient light, approachable confident stance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV2HNmTB5ICn3twQlfiIb1Tq9I6wUbGvyY5djVetS5x76T1koW6DJGxx5LrxnBP2PMMxa7kHHk1FnhGAcuqM10V3UQYwrEahrDWKobfiQI_v6-QJ3VmxatwcXQqipksxCm1cxEk3mHH-fG0DgsdrBTumAdIFSkDk39gLcD4fV9w8FVDFCRHnNeKST6y5XEOSqNukRDmW8YZqNUkGc5Byn5QWGDLEJnoC2K2fACvjDgqRzRgiKfZyqU"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-outline-variant ring-2 ring-surface-container-lowest"></span>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface text-[11px] font-semibold border border-surface-container-highest">
+<span class="material-symbols-outlined text-[12px]">auto_awesome</span>
+              4 shared
+            </span>
+</div>
+<div class="flex flex-col mb-space-xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold">Kabir Verma, 26</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[13px] text-on-surface">near_me</span>
+              Saket • 5.8 km
+            </span>
+</div>
+<!-- Interest Tags -->
+<div class="flex flex-wrap gap-1.5 my-space-sm">
+<span class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm">Design Systems</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant border border-surface-container-highest font-label-sm text-label-sm">Typography</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant border border-surface-container-highest font-label-sm text-label-sm">Analog Audio</span>
+</div>
+</div>
+<button class="connect-btn mt-space-xs w-full py-2.5 px-4 rounded-full bg-primary text-on-primary hover:bg-neutral-800 transition-all duration-200 font-label-md text-label-md flex items-center justify-center gap-1.5 active:scale-95" onclick="toggleConnect(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>Connect</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Section 2: Suggested through your network -->
+<section class="flex flex-col mb-space-xl">
+<div class="px-margin-mobile flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">diversity_1</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Suggested through your network</h3>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:text-on-surface-variant font-semibold underline underline-offset-4">See all (9)</button>
+</div>
+<p class="px-margin-mobile font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Friends of your local collaborators</p>
+<!-- Horizontal Row -->
+<div class="flex gap-space-sm overflow-x-auto px-margin-mobile pb-space-xs no-scrollbar snap-x snap-mandatory">
+<!-- Network Card 1 -->
+<div class="min-w-[240px] max-w-[240px] snap-start rounded-2xl bg-surface-container-low border border-surface-container-highest p-card-padding shadow-[0_2px_8px_rgba(0,0,0,0.03)] flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between mb-space-sm">
+<img class="w-14 h-14 rounded-full object-cover shadow-sm grayscale" data-alt="Portrait of Rohan Mehta, a 31-year-old full-stack software engineer in a modern sunlit co-working loft, friendly demeanor, subtle teal and warm wood interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7Pd6vLnWifomuIG5Spaqugxm78Z4fEBUckRpf2PlSvZAJfAc3KG6ylGQdXqij6yrHrv3yllcmTAlzJZxIvw9SnP8tqvYkX5iiatahpM4LCnQlkfTbuFI4g009pdHDkLEcV8XytrZAOX5my7V3aht2PL9hwZFsZJ4nPSAVX5aYQFySLZkPAUWsMkYhlJkkJdLAlKzpv1DASlySjihqKynoD6C80k3FpT5CvX3NEWNmFoESjsV-Nlav"/>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface text-[11px] font-semibold border border-outline-variant/60">
+<span class="material-symbols-outlined text-[12px]">diversity_1</span>
+              3 mutuals
+            </span>
+</div>
+<div class="flex flex-col mb-space-xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold">Rohan Mehta, 31</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5 truncate">
+              Via Neha Kapoor &amp; Tanmay
+            </span>
+</div>
+<!-- Interest Tags -->
+<div class="flex flex-wrap gap-1.5 my-space-sm">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface border border-surface-container-highest font-label-sm text-label-sm font-medium">Full-stack Dev</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface-variant border border-surface-container-highest font-label-sm text-label-sm">Cycling</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface-variant border border-surface-container-highest font-label-sm text-label-sm">TypeScript</span>
+</div>
+</div>
+<button class="connect-btn mt-space-xs w-full py-2.5 px-4 rounded-full bg-primary text-on-primary hover:bg-neutral-800 transition-all duration-200 font-label-md text-label-md flex items-center justify-center gap-1.5 active:scale-95" onclick="toggleConnect(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>Connect</span>
+</button>
+</div>
+<!-- Network Card 2 -->
+<div class="min-w-[240px] max-w-[240px] snap-start rounded-2xl bg-surface-container-low border border-surface-container-highest p-card-padding shadow-[0_2px_8px_rgba(0,0,0,0.03)] flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between mb-space-sm">
+<img class="w-14 h-14 rounded-full object-cover shadow-sm grayscale" data-alt="Warm smiling portrait of Ananya Roy, 28, creative director and ceramicist with natural curly hair, earthy terracotta backdrop with lush potted plants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkazobIMgITXheu4sc74yIygYWvplPGKCmfufW0XG2DRPKVOtf-R_zYp-Gqh2hSNlQ8zMlbNpJEoVcxk8F9Pa43z7IuZ3ErR7cnE22KlXj1uLz2UfGsPYKpGnyK89rSDs2-1rx18mc3peoepn7RqkYnKGflR13hRWT8bOz1X2Xq8Xb30_g82Yc1C_4uGgIG6dAc1qH6iBNFfboOpa_TqDUQCtQvqquRFOrkgga7pOvh8kE4BmH_DPI"/>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface text-[11px] font-semibold border border-outline-variant/60">
+<span class="material-symbols-outlined text-[12px]">diversity_1</span>
+              2 mutuals
+            </span>
+</div>
+<div class="flex flex-col mb-space-xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold">Ananya Roy, 28</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5 truncate">
+              Via Aarav Patel
+            </span>
+</div>
+<!-- Interest Tags -->
+<div class="flex flex-wrap gap-1.5 my-space-sm">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface border border-surface-container-highest font-label-sm text-label-sm font-medium">Brand Identity</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface-variant border border-surface-container-highest font-label-sm text-label-sm">Printmaking</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface-variant border border-surface-container-highest font-label-sm text-label-sm">Film Photo</span>
+</div>
+</div>
+<button class="connect-btn mt-space-xs w-full py-2.5 px-4 rounded-full bg-primary text-on-primary hover:bg-neutral-800 transition-all duration-200 font-label-md text-label-md flex items-center justify-center gap-1.5 active:scale-95" onclick="toggleConnect(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>Connect</span>
+</button>
+</div>
+<!-- Network Card 3 -->
+<div class="min-w-[240px] max-w-[240px] snap-start rounded-2xl bg-surface-container-low border border-surface-container-highest p-card-padding shadow-[0_2px_8px_rgba(0,0,0,0.03)] flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between mb-space-sm">
+<img class="w-14 h-14 rounded-full object-cover shadow-sm grayscale" data-alt="Portrait of Vikram Rao, a 33-year-old architectural planner, sitting at a sunlit blueprint desk, candid warm atmosphere, modern minimal clothing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_nFy1jVFhI30OUm8Z6jtlVrpkT7huwbm129R2ZbPWhAeY6BJQKKD-bckN_nEjeUVDnhIQtis7qAb7nk83G5qvYVOPS5kj8O3jBwCAJdqe3wPStbEsH6HBCKMv5h4BEK4qAG3riG_uZqPKB-KcWbtRjPhw8Xc0iWWwwp2UqiOH65UOaOntYmluf5cM7Xe5ddazWRSbXAUK2e7hludIRTIzPkaJyEuzreDmyo0KukiO_azJzWdMz7Ob"/>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface text-[11px] font-semibold border border-outline-variant/60">
+<span class="material-symbols-outlined text-[12px]">diversity_1</span>
+              5 mutuals
+            </span>
+</div>
+<div class="flex flex-col mb-space-xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold">Vikram Rao, 33</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5 truncate">
+              Via Meera Sen
+            </span>
+</div>
+<!-- Interest Tags -->
+<div class="flex flex-wrap gap-1.5 my-space-sm">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface border border-surface-container-highest font-label-sm text-label-sm font-medium">Urban Design</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface-variant border border-surface-container-highest font-label-sm text-label-sm">3D Modeling</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface-variant border border-surface-container-highest font-label-sm text-label-sm">Archery</span>
+</div>
+</div>
+<button class="connect-btn mt-space-xs w-full py-2.5 px-4 rounded-full bg-primary text-on-primary hover:bg-neutral-800 transition-all duration-200 font-label-md text-label-md flex items-center justify-center gap-1.5 active:scale-95" onclick="toggleConnect(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>Connect</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Section 3: Same skill, other cities -->
+<section class="flex flex-col mb-space-2xl">
+<div class="px-margin-mobile flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">public</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Same skill, other cities</h3>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:text-on-surface-variant font-semibold underline underline-offset-4">Explore</button>
+</div>
+<p class="px-margin-mobile font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Exchange perspectives with remote design peers</p>
+<!-- Horizontal Row -->
+<div class="flex gap-space-sm overflow-x-auto px-margin-mobile pb-space-xs no-scrollbar snap-x snap-mandatory">
+<!-- City Card 1 -->
+<div class="min-w-[240px] max-w-[240px] snap-start rounded-2xl bg-surface-container-lowest border border-surface-container-highest p-card-padding shadow-[0_2px_8px_rgba(0,0,0,0.04)] flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between mb-space-sm">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover shadow-sm grayscale" data-alt="Portrait of Priya Shah, a 29-year-old creative in Mumbai, standing on a terrace overlooking the sea breeze, warm sunset illumination, warm earthy palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS13X2uNB1H7oGMIsoDNzClryk6TZ2tWZfdgaC6YdDzq53bXi88xVEOV4TJzCBN4HoWN5Tu98tcOi_zyQHCKDr_otUrLOe7_fvoSqCyBbnHd2CA5741ZQd7HY-Q0hTstwUzZuHg0iMplfP1zODAM2_0gCgeRrQFN5LpVixHvTZdW_rR6IC5FbeK1Pj3JH-mdAQObT6V-Z_Vo9qjH-eLlnnOsRTNFLMuJIiNwBIvKy98sEodAzaErNi"/>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface text-[11px] font-semibold border border-surface-container-highest">
+<span class="material-symbols-outlined text-[12px] text-on-surface">apartment</span>
+              Mumbai
+            </span>
+</div>
+<div class="flex flex-col mb-space-xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold">Priya Shah, 29</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+              Bandra West • Mumbai
+            </span>
+</div>
+<!-- Interest Tags -->
+<div class="flex flex-wrap gap-1.5 my-space-sm">
+<span class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm">UX Architecture</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant border border-surface-container-highest font-label-sm text-label-sm">Figma</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant border border-surface-container-highest font-label-sm text-label-sm">Bookbinding</span>
+</div>
+</div>
+<button class="connect-btn mt-space-xs w-full py-2.5 px-4 rounded-full bg-primary text-on-primary hover:bg-neutral-800 transition-all duration-200 font-label-md text-label-md flex items-center justify-center gap-1.5 active:scale-95" onclick="toggleConnect(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>Connect</span>
+</button>
+</div>
+<!-- City Card 2 -->
+<div class="min-w-[240px] max-w-[240px] snap-start rounded-2xl bg-surface-container-lowest border border-surface-container-highest p-card-padding shadow-[0_2px_8px_rgba(0,0,0,0.04)] flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between mb-space-sm">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover shadow-sm grayscale" data-alt="Portrait of Dev Joshi, 28, product designer based in Bengaluru, sitting in a verdant garden cafe with lush foliage, warm rim lighting, serene friendly smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO0VQF-Gv7CWXbJXtmjTsITzJctCxlTHk2195ulkFrUxyIVMOQf7l1Zyz7izNJhOvX344gL3OYtrj7-bzloSSw2_Ttur4zwhte5huYATnLeDpoYmwxVoSCT72I2cinUxbO0Po4lBI4P10CKGD8R4-F1vNr5u__900fSZw7zlQWBI8FjvGxOF3icIMHBphL28uNMCLuqUe4tlQ_d-hhv4tQmsP1PDBOmVwmcflpqw7yn18PbB6Xilg-"/>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface text-[11px] font-semibold border border-surface-container-highest">
+<span class="material-symbols-outlined text-[12px] text-on-surface">apartment</span>
+              Bengaluru
+            </span>
+</div>
+<div class="flex flex-col mb-space-xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold">Dev Joshi, 28</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+              Indiranagar • Bengaluru
+            </span>
+</div>
+<!-- Interest Tags -->
+<div class="flex flex-wrap gap-1.5 my-space-sm">
+<span class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm">Product Strategy</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant border border-surface-container-highest font-label-sm text-label-sm">Figma</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant border border-surface-container-highest font-label-sm text-label-sm">Bouldering</span>
+</div>
+</div>
+<button class="connect-btn mt-space-xs w-full py-2.5 px-4 rounded-full bg-primary text-on-primary hover:bg-neutral-800 transition-all duration-200 font-label-md text-label-md flex items-center justify-center gap-1.5 active:scale-95" onclick="toggleConnect(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>Connect</span>
+</button>
+</div>
+<!-- City Card 3 -->
+<div class="min-w-[240px] max-w-[240px] snap-start rounded-2xl bg-surface-container-lowest border border-surface-container-highest p-card-padding shadow-[0_2px_8px_rgba(0,0,0,0.04)] flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between mb-space-sm">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover shadow-sm grayscale" data-alt="Portrait of Tara Nair, a 30-year-old creative technologist in Kochi, wearing warm linen, tropical garden background with warm golden sun rays filtering through leaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0O9EZ7LtjUE2OAIpHGsX8Ofzj2H3nYRJqn6XqgoJVf8QIKbFgSK89NRjeV0gmfN8qUf3SvXZhrgs0AXJ7cLBQ-hd_vHokai1cSwi70Xg4xny92dDYSW35NMqDzPoAL-zwxRC155oUv8QbWa6k2TOdNdWqVNF6APddu8zv2h-5-4XeHVqBm2TcAQ9naPOAfctnI7qGXR5UeZuJq7qjwulZV_QvKT8Su6EzhI-umRZpelykUo3IV-gW"/>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface text-[11px] font-semibold border border-surface-container-highest">
+<span class="material-symbols-outlined text-[12px] text-on-surface">apartment</span>
+              Kochi
+            </span>
+</div>
+<div class="flex flex-col mb-space-xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold">Tara Nair, 30</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+              Fort Kochi • Kochi
+            </span>
+</div>
+<!-- Interest Tags -->
+<div class="flex flex-wrap gap-1.5 my-space-sm">
+<span class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm">Creative Tech</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant border border-surface-container-highest font-label-sm text-label-sm">Generative Art</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant border border-surface-container-highest font-label-sm text-label-sm">Sound Design</span>
+</div>
+</div>
+<button class="connect-btn mt-space-xs w-full py-2.5 px-4 rounded-full bg-primary text-on-primary hover:bg-neutral-800 transition-all duration-200 font-label-md text-label-md flex items-center justify-center gap-1.5 active:scale-95" onclick="toggleConnect(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>Connect</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Delight Micro-Interaction Toast -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 z-40 bg-on-surface text-surface px-4 py-2.5 rounded-full shadow-2xl flex items-center gap-2 pointer-events-none opacity-0 transition-opacity duration-300 border border-neutral-700" id="connect-toast">
+<span class="material-symbols-outlined text-[18px] text-surface">check_circle</span>
+<span class="font-label-md text-label-md" id="toast-message">Connection invitation sent!</span>
+</div>
+</div>
+<script>
+  function toggleConnect(btn) {
+    const isConnected = btn.getAttribute('data-connected') === 'true';
+    const toast = document.getElementById('connect-toast');
+    const toastMsg = document.getElementById('toast-message');
+
+    if (!isConnected) {
+      btn.setAttribute('data-connected', 'true');
+      btn.classList.remove('bg-primary', 'text-on-primary', 'hover:bg-neutral-800');
+      btn.classList.add('bg-surface-container', 'text-on-surface', 'border', 'border-on-surface');
+      btn.innerHTML = `
+        <span class="material-symbols-outlined text-[16px]">done</span>
+        <span>Invited</span>
+      `;
+      
+      if (toast && toastMsg) {
+        toastMsg.textContent = "Invitation sent successfully";
+        toast.classList.remove('opacity-0');
+        toast.classList.add('opacity-100');
+        setTimeout(() => {
+          toast.classList.remove('opacity-100');
+          toast.classList.add('opacity-0');
+        }, 2200);
+      }
+    } else {
+      btn.setAttribute('data-connected', 'false');
+      btn.classList.remove('bg-surface-container', 'text-on-surface', 'border', 'border-on-surface');
+      btn.classList.add('bg-primary', 'text-on-primary', 'hover:bg-neutral-800');
+      btn.innerHTML = `
+        <span class="material-symbols-outlined text-[16px]">person_add</span>
+        <span>Connect</span>
+      `;
+    }
+  }
+
+  // Highlight active bottom navigation icon matching style specs
+  document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('nav a[data-path="discover"]');
+    navLinks.forEach(link => {
+      link.classList.remove('text-outline');
+      link.classList.add('text-primary');
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl border-t border-surface-container-highest" data-active-classes="text-primary"><div class="h-16 px-space-xs flex items-center justify-around"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] gap-1 transition-colors text-primary font-medium" data-path="discover" href="#"><span class="material-symbols-outlined text-[24px]">explore</span><span class="font-label-sm text-label-sm">Discover</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] gap-1 text-outline hover:text-primary transition-colors" data-path="connections" href="#"><span class="material-symbols-outlined text-[24px]">diversity_3</span><span class="font-label-sm text-label-sm">Connections</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] gap-1 text-outline hover:text-primary transition-colors" data-path="chat" href="#"><span class="material-symbols-outlined text-[24px]">chat_bubble</span><span class="font-label-sm text-label-sm">Chat</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] gap-1 text-outline hover:text-primary transition-colors" data-path="profile" href="#"><span class="material-symbols-outlined text-[24px]">account_circle</span><span class="font-label-sm text-label-sm">Profile</span></a></div></nav></body></html>

@@ -1,0 +1,22 @@
+{
+  "name": "connectlocal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ConnectLocal - Hyperlocal skill-and-interest based people discovery platform",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:mobile": "npm run start --workspace=apps/mobile",
+    "dev:api": "npm run dev --workspace=apps/api",
+    "start:api": "npm run start --workspace=apps/api"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "express",
+    "mongodb"
+  ],
+  "author": "",
+  "license": "ISC"
+}

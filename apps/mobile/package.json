@@ -1,0 +1,53 @@
+{
+  "name": "mobile",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "dependencies": {
+    "@expo/metro-runtime": "~57.0.15",
+    "@expo/vector-icons": "^15.0.2",
+    "@react-native-community/datetimepicker": "9.1.0",
+    "@react-navigation/native": "^7.3.18",
+    "@react-navigation/native-stack": "^7.18.10",
+    "expo": "~57.0.21",
+    "expo-image-picker": "~57.0.17",
+    "expo-secure-store": "~57.0.4",
+    "expo-status-bar": "~57.0.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-screens": "~4.26.0",
+    "react-native-svg": "15.15.4",
+    "react-native-web": "^0.21.2",
+    "socket.io-client": "^4.8.3"
+  },
+  "devDependencies": {
+    "@types/react": "~19.2.2",
+    "typescript": "~6.0.3"
+  },
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "test:signup": "node scripts/test-signup.js",
+    "test:create-profile": "node scripts/test-create-profile-e2e.js",
+    "test:discover": "node scripts/test-discover-e2e.js",
+    "test:profile-view": "node scripts/test-profile-view-e2e.js",
+    "test:connections": "node scripts/test-connections-e2e.js",
+    "test:chat": "node scripts/test-chat-e2e.js",
+    "test:create-profile-photo": "node scripts/test-create-profile-photo-e2e.js",
+    "test:auth-session": "node scripts/test-auth-session-e2e.js",
+    "test:chat-list": "node scripts/test-chat-list-e2e.js",
+    "test:my-profile": "node scripts/test-my-profile-e2e.js",
+    "test:read-receipts-unit": "node scripts/test-read-receipts-unit.js",
+    "test:read-receipts-flow": "node scripts/test-read-receipts-flow.js",
+    "test:notifications-unit": "node scripts/test-notifications-unit.js",
+    "test:notifications-flow": "node scripts/test-notifications-flow.js",
+    "test:composer-focus": "node scripts/test-composer-focus.js",
+    "test:signup-flow": "node scripts/test-signup-flow-e2e.js",
+    "test:discover-chips": "node scripts/test-discover-chips.js",
+    "test:all-safe": "node scripts/run-all-safe.js"
+  },
+  "private": true
+}

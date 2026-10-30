@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-surface": "#1a1c1d",
+        "on-primary-fixed": "#1b1b1e",
+        "surface-container": "#eeeeef",
+        "outline": "#77767b",
+        "tertiary-fixed": "#e8e2d9",
+        "surface-container-highest": "#e2e2e3",
+        "on-primary-fixed-variant": "#47464a",
+        "on-error": "#ffffff",
+        "on-secondary-fixed": "#1a1b22",
+        "background": "#f9f9fa",
+        "surface-bright": "#f9f9fa",
+        "primary-fixed": "#e4e1e6",
+        "tertiary-fixed-dim": "#cbc6bd",
+        "on-secondary-fixed-variant": "#46464e",
+        "secondary-fixed-dim": "#c6c5cf",
+        "surface-dim": "#dadadb",
+        "surface": "#f9f9fa",
+        "on-primary": "#ffffff",
+        "on-background": "#1a1c1d",
+        "on-tertiary": "#ffffff",
+        "on-primary-container": "#858387",
+        "secondary-fixed": "#e3e1ec",
+        "primary-container": "#1b1b1e",
+        "outline-variant": "#c8c5cb",
+        "inverse-primary": "#c8c5ca",
+        "on-error-container": "#93000a",
+        "error": "#ba1a1a",
+        "inverse-surface": "#2f3132",
+        "primary": "#000000",
+        "surface-tint": "#5f5e61",
+        "tertiary-container": "#1d1b16",
+        "on-tertiary-fixed-variant": "#494640",
+        "on-secondary-container": "#63646c",
+        "secondary-container": "#e3e1ec",
+        "surface-variant": "#e2e2e3",
+        "inverse-on-surface": "#f0f1f2",
+        "primary-fixed-dim": "#c8c5ca",
+        "error-container": "#ffdad6",
+        "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f3f3f4",
+        "surface-container-high": "#e8e8e9",
+        "on-secondary": "#ffffff",
+        "on-surface-variant": "#47464b",
+        "on-tertiary-container": "#88837c",
+        "on-tertiary-fixed": "#1d1b16",
+        "secondary": "#5d5e66",
+        "tertiary": "#000000"
+      },
+      "borderRadius": {
+        "DEFAULT": "1rem",
+        "lg": "2rem",
+        "xl": "3rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-xl": "2.5rem",
+        "gutter": "1.5rem",
+        "space-sm": "0.5rem",
+        "gutter-mobile": "1rem",
+        "space-lg": "1.5rem",
+        "space-xs": "0.25rem",
+        "space-md": "1rem",
+        "margin": "3rem",
+        "margin-mobile": "1.25rem"
+      },
+      "fontFamily": {
+        "body-lg": ["Inter"],
+        "display-lg-mobile": ["Inter"],
+        "label-md": ["Inter"],
+        "label-sm": ["Inter"],
+        "headline-lg": ["Inter"],
+        "headline-lg-mobile": ["Inter"],
+        "headline-md": ["Inter"],
+        "display-lg": ["Inter"],
+        "body-md": ["Inter"]
+      },
+      "fontSize": {
+        "body-lg": ["16px", { lineHeight: "26px", letterSpacing: "-0.005em", fontWeight: "400" }],
+        "display-lg-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "600" }],
+        "label-md": ["13px", { lineHeight: "18px", letterSpacing: "0.01em", fontWeight: "500" }],
+        "label-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.06em", fontWeight: "600" }],
+        "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "600" }],
+        "headline-lg-mobile": ["24px", { lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "600" }],
+        "headline-md": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "500" }],
+        "display-lg": ["56px", { lineHeight: "64px", letterSpacing: "-0.03em", fontWeight: "600" }],
+        "body-md": ["14px", { lineHeight: "22px", letterSpacing: "0em", fontWeight: "400" }],
+        "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }]
+      }
+    }
+  }
+}</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface pt-safe pb-safe flex flex-col min-h-screen"><main class="flex flex-col relative w-full bg-surface flex-1"><div class="flex flex-col w-full pb-8">
+<!-- Top Navigation & Progress Bar -->
+<div class="px-5 pt-3 pb-2 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<button aria-label="Go back" class="w-10 h-10 -ml-2 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors active:scale-95" type="button">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full border border-outline-variant bg-surface-container-lowest text-on-surface">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">shield</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Step 1 of 4</span>
+</div>
+<div class="w-8"></div>
+</div>
+<!-- Segmented Stepper Bar -->
+<div class="grid grid-cols-4 gap-1.5 w-full pt-1">
+<div class="h-1.5 rounded-full bg-primary transition-all duration-300"></div>
+<div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+<div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+<div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+</div>
+</div>
+<!-- Header Section with Friendly Micro-Badge -->
+<div class="px-5 pt-4 pb-2 flex flex-col">
+<div class="inline-flex items-center gap-2 mb-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-bold">ConnectLocal ID</span>
+</div>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-on-surface tracking-tight font-semibold">Let's get to know you</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5">
+      Create your verified local account to safely discover neighbors, share skills, and build community.
+    </p>
+</div>
+<!-- Trust Banner / Friendly Callout -->
+<div class="mx-5 my-3 p-3.5 rounded-2xl bg-surface-container-low border border-outline-variant/50 flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant flex items-center justify-center flex-shrink-0 text-on-surface">
+<span class="material-symbols-outlined text-lg">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Your privacy is community-first</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Exact street addresses and age are never publicly displayed on your neighbor profile.</span>
+</div>
+</div>
+<!-- Main Form Fields -->
+<form class="px-5 flex flex-col gap-5 mt-1" id="signup-form" onsubmit="event.preventDefault()">
+<!-- Full Name Input -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="fullName">
+<span>Full legal or preferred name</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm font-medium">Public display</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-outline text-xl pointer-events-none">badge</span>
+<input autocomplete="name" class="w-full h-12 pl-12 pr-4 bg-surface-container-lowest text-on-surface rounded-2xl font-body-md text-body-md border border-outline-variant/70 shadow-sm outline-none placeholder:text-outline/70 focus:border-primary focus:shadow-md transition-all" id="fullName" name="name" placeholder="e.g. Maya Lin" type="text"/>
+</div>
+</div>
+<!-- Date of Birth Input -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="dob">Date of birth</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-outline text-xl pointer-events-none">cake</span>
+<input class="w-full h-12 pl-12 pr-4 bg-surface-container-lowest text-on-surface rounded-2xl font-body-md text-body-md border border-outline-variant/70 shadow-sm outline-none placeholder:text-outline/70 focus:border-primary focus:shadow-md transition-all" id="dob" name="birthdate" type="date"/>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant px-1 pt-0.5">
+<span class="material-symbols-outlined text-sm text-on-surface">info</span>
+<span class="font-body-sm text-body-sm">You must be 18 or older to join ConnectLocal</span>
+</div>
+</div>
+<!-- Gender Segmented Pill Selector -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface">Gender identity</label>
+<div class="grid grid-cols-2 gap-2" id="gender-group">
+<button class="gender-btn h-11 px-3.5 rounded-2xl bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center justify-center gap-2 border border-outline-variant/70 shadow-sm transition-all active:scale-95" data-gender="female" type="button">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span>Female</span>
+</button>
+<button class="gender-btn h-11 px-3.5 rounded-2xl bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center justify-center gap-2 border border-outline-variant/70 shadow-sm transition-all active:scale-95" data-gender="male" type="button">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span>Male</span>
+</button>
+<button class="gender-btn h-11 px-3.5 rounded-2xl bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center justify-center gap-2 border border-outline-variant/70 shadow-sm transition-all active:scale-95" data-gender="non-binary" type="button">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span>Non-binary</span>
+</button>
+<button class="gender-btn h-11 px-3.5 rounded-2xl bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center justify-center gap-2 border border-outline-variant/70 shadow-sm transition-all active:scale-95" data-gender="prefer-not" type="button">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span>Prefer not to say</span>
+</button>
+</div>
+</div>
+<!-- City / Neighborhood Selector -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="city">
+<span>Your city or hub</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">Sets local feed</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-on-surface text-xl pointer-events-none">location_on</span>
+<input autocomplete="address-level2" class="w-full h-12 pl-12 pr-10 bg-surface-container-lowest text-on-surface rounded-2xl font-body-md text-body-md border border-outline-variant/70 shadow-sm outline-none placeholder:text-outline/70 focus:border-primary focus:shadow-md transition-all" id="city" name="city" placeholder="e.g. San Francisco, CA or Delhi" type="text"/>
+<button class="absolute right-3 w-8 h-8 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" title="Use current location" type="button">
+<span class="material-symbols-outlined text-lg">my_location</span>
+</button>
+</div>
+<!-- Quick Location Pill Suggestions -->
+<div class="flex items-center gap-1.5 overflow-x-auto py-1 no-scrollbar">
+<button class="px-2.5 py-1 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface font-label-sm text-label-sm whitespace-nowrap active:scale-95" onclick="document.getElementById('city').value='San Francisco, CA'" type="button">
+          San Francisco, CA
+        </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface font-label-sm text-label-sm whitespace-nowrap active:scale-95" onclick="document.getElementById('city').value='Austin, TX'" type="button">
+          Austin, TX
+        </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface font-label-sm text-label-sm whitespace-nowrap active:scale-95" onclick="document.getElementById('city').value='New Delhi, DL'" type="button">
+          New Delhi
+        </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface font-label-sm text-label-sm whitespace-nowrap active:scale-95" onclick="document.getElementById('city').value='Brooklyn, NY'" type="button">
+          Brooklyn
+        </button>
+</div>
+</div>
+</form>
+<!-- Community Vibe Illustration / Visual Moment -->
+<div class="mx-5 mt-5 p-4 rounded-3xl bg-surface-container-lowest border border-outline-variant/60 shadow-sm flex items-center gap-4">
+<div class="w-14 h-14 rounded-2xl overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover grayscale" data-alt="Warm natural-light portrait of smiling young community members talking on a sunlit urban neighborhood front porch with clay potted terracotta planters and lush green foliage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZakbhLPoxpo1QDdWv7KqziJmB4NQf2T5wS_rs4WcBIc2noYbcxNLEDML8B1kWnB6v3GnPL0YEcgJSlV1Cxv5aoh1d4p8Tzj4F19MzCrVdjXyhQWL-k1NJv6G1rnLrl-hXHNP2iCDvDNgbxFXM1TjF2pzW80NdXrUINcEVqLyd3zgRMAq0RefX8HYWOdVXRJGKKAgOmlL8APU3txMBH5i8Gj4Me1V74Hwg9lcUbhdxIDO5Z8Ia8W12"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-base">handshake</span>
+<span class="font-label-sm text-label-sm font-bold">12,400+ Active Neighbors</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+        Meet makers, helpers, and local friends right nearby.
+      </p>
+</div>
+</div>
+<!-- Sticky / Fixed Floating Bottom Action Bar -->
+<div class="sticky bottom-0 mt-6 px-5 py-4 bg-surface/90 backdrop-blur-md flex flex-col gap-3">
+<button class="w-full h-12 rounded-full bg-primary hover:bg-inverse-surface text-on-primary font-label-md text-label-md flex items-center justify-center gap-2 shadow-lg transition-all active:scale-[0.98]" id="continue-btn" type="button">
+<span>Continue</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+<!-- Footer Terms & Reassurance -->
+<p class="font-body-sm text-body-sm text-center text-on-surface-variant px-2 leading-tight">
+      By continuing, you agree to our 
+      <a class="text-on-surface font-semibold underline underline-offset-2 hover:opacity-80" href="#">Terms of Service</a> 
+      and 
+      <a class="text-on-surface font-semibold underline underline-offset-2 hover:opacity-80" href="#">Privacy Policy</a>.
+    </p>
+</div>
+</div>
+<script>
+  (function initSignupFlow() {
+    const genderButtons = document.querySelectorAll('.gender-btn');
+    genderButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        genderButtons.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary', 'border-primary', 'shadow-md');
+          b.classList.add('bg-surface-container-lowest', 'text-on-surface', 'border-outline-variant/70');
+          const dot = b.querySelector('span:first-child');
+          if (dot) {
+            dot.className = 'w-2 h-2 rounded-full bg-outline-variant';
+          }
+        });
+        btn.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'border-outline-variant/70');
+        btn.classList.add('bg-primary', 'text-on-primary', 'border-primary', 'shadow-md');
+        const activeDot = btn.querySelector('span:first-child');
+        if (activeDot) {
+          activeDot.className = 'w-2 h-2 rounded-full bg-surface-container-lowest';
+        }
+      });
+    });
+
+    const continueBtn = document.getElementById('continue-btn');
+    if (continueBtn) {
+      continueBtn.addEventListener('click', () => {
+        const nameInput = document.getElementById('fullName');
+        if (!nameInput.value.trim()) {
+          nameInput.focus();
+          nameInput.classList.add('ring-2', 'ring-primary');
+          setTimeout(() => nameInput.classList.remove('ring-2', 'ring-primary'), 1200);
+        } else {
+          continueBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-lg">progress_activity</span><span>Saving details...</span>';
+          setTimeout(() => {
+            continueBtn.innerHTML = '<span>Continue to Verification</span><span class="material-symbols-outlined text-lg">check</span>';
+          }, 800);
+        }
+      });
+    }
+  })();
+</script></main></body></html>

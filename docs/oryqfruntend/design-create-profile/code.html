@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-surface": "#1a1c1d",
+          "on-primary-fixed": "#1b1b1e",
+          "surface-container": "#eeeeef",
+          "outline": "#77767b",
+          "tertiary-fixed": "#e8e2d9",
+          "surface-container-highest": "#e2e2e3",
+          "on-primary-fixed-variant": "#47464a",
+          "on-error": "#ffffff",
+          "on-secondary-fixed": "#1a1b22",
+          "background": "#f9f9fa",
+          "surface-bright": "#f9f9fa",
+          "primary-fixed": "#e4e1e6",
+          "tertiary-fixed-dim": "#cbc6bd",
+          "on-secondary-fixed-variant": "#46464e",
+          "secondary-fixed-dim": "#c6c5cf",
+          "surface-dim": "#dadadb",
+          "surface": "#f9f9fa",
+          "on-primary": "#ffffff",
+          "on-background": "#1a1c1d",
+          "on-tertiary": "#ffffff",
+          "on-primary-container": "#858387",
+          "secondary-fixed": "#e3e1ec",
+          "primary-container": "#1b1b1e",
+          "outline-variant": "#c8c5cb",
+          "inverse-primary": "#c8c5ca",
+          "on-error-container": "#93000a",
+          "error": "#ba1a1a",
+          "inverse-surface": "#2f3132",
+          "primary": "#000000",
+          "surface-tint": "#5f5e61",
+          "tertiary-container": "#1d1b16",
+          "on-tertiary-fixed-variant": "#494640",
+          "on-secondary-container": "#63646c",
+          "secondary-container": "#e3e1ec",
+          "surface-variant": "#e2e2e3",
+          "inverse-on-surface": "#f0f1f2",
+          "primary-fixed-dim": "#c8c5ca",
+          "error-container": "#ffdad6",
+          "surface-container-lowest": "#ffffff",
+          "surface-container-low": "#f3f3f4",
+          "surface-container-high": "#e8e8e9",
+          "on-secondary": "#ffffff",
+          "on-surface-variant": "#47464b",
+          "on-tertiary-container": "#88837c",
+          "on-tertiary-fixed": "#1d1b16",
+          "secondary": "#5d5e66",
+          "tertiary": "#000000"
+        },
+        "borderRadius": {
+          "DEFAULT": "1rem",
+          "lg": "2rem",
+          "xl": "3rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xl": "2.5rem",
+          "gutter": "1.5rem",
+          "space-sm": "0.5rem",
+          "gutter-mobile": "1rem",
+          "space-lg": "1.5rem",
+          "space-xs": "0.25rem",
+          "space-md": "1rem",
+          "margin": "3rem",
+          "margin-mobile": "1.25rem"
+        },
+        "fontFamily": {
+          "body-lg": ["Inter"],
+          "display-lg-mobile": ["Inter"],
+          "label-md": ["Inter"],
+          "label-sm": ["Inter"],
+          "headline-lg": ["Inter"],
+          "headline-lg-mobile": ["Inter"],
+          "headline-md": ["Inter"],
+          "display-lg": ["Inter"],
+          "body-md": ["Inter"]
+        },
+        "fontSize": {
+          "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+          "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+          "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+          "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600" }],
+          "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+          "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+          "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+          "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" }],
+          "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }]
+        }
+      }
+    }
+  }
+</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface pt-safe pb-safe flex flex-col min-h-screen"><main class="flex flex-col relative w-full bg-surface flex-1"><div class="flex flex-col w-full px-margin-mobile pb-space-xl">
+<!-- Top Navigation & Progress -->
+<div class="flex items-center justify-between pt-space-md pb-space-sm">
+<button aria-label="Go back" class="flex items-center justify-center w-11 h-11 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors duration-150 border border-outline-variant/40" type="button">
+<span class="material-symbols-outlined text-[22px]">arrow_back</span>
+</button>
+<div class="flex flex-col items-center gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Step 3 of 4</span>
+<!-- 4-step segmented progress indicator -->
+<div class="flex items-center gap-1.5 w-32">
+<div class="h-1.5 flex-1 rounded-full bg-primary"></div>
+<div class="h-1.5 flex-1 rounded-full bg-primary"></div>
+<div class="h-1.5 flex-1 rounded-full bg-primary relative overflow-hidden">
+<div class="absolute inset-0 bg-neutral-600 animate-pulse"></div>
+</div>
+<div class="h-1.5 flex-1 rounded-full bg-surface-container-highest"></div>
+</div>
+</div>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-primary px-space-xs py-1 transition-colors" type="button">
+      Skip
+    </button>
+</div>
+<!-- Profile Photo Upload -->
+<div class="flex flex-col items-center mt-space-md mb-space-xl">
+<div class="relative group cursor-pointer">
+<div class="w-28 h-28 rounded-full bg-surface-container-lowest shadow-md flex items-center justify-center overflow-hidden p-1 border border-outline-variant/50">
+<div class="w-full h-full rounded-full bg-surface-container-low flex flex-col items-center justify-center text-on-surface-variant transition-colors group-hover:bg-surface-container">
+<span class="material-symbols-outlined text-[36px] text-on-surface-variant mb-0.5">account_circle</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tap to add</span>
+</div>
+</div>
+<!-- Camera Badge -->
+<div class="absolute bottom-0 right-0 w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-md transform transition-transform group-hover:scale-105 active:scale-95 border-2 border-surface-container-lowest">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+</div>
+</div>
+<span class="mt-space-xs font-label-md text-label-md text-on-surface font-medium">Add profile photo</span>
+<span class="font-body-sm text-label-sm text-on-surface-variant">Clear friendly photos connect best</span>
+</div>
+<!-- Page Header Titles -->
+<div class="mb-space-lg">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-1">Tell people what you're about</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Helps your city match you with relevant peers and authentic neighborhood projects.</p>
+</div>
+<!-- Form Content Body -->
+<div class="flex flex-col gap-space-lg">
+<!-- Section 1: Looking For -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-headline-md text-headline-md text-on-surface">What are you looking for?</label>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Select multiple</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant -mt-1">Signals your current intention in the local community.</p>
+<div class="flex flex-wrap gap-2 pt-1" id="looking-for-group">
+<!-- Selected: Friendship -->
+<button class="intent-pill flex items-center gap-1.5 px-3.5 py-2 rounded-full font-label-md text-label-md bg-primary text-on-primary shadow-sm transition-all duration-150 active:scale-95 border border-primary" data-selected="true" type="button">
+<span class="text-base grayscale">🤝</span>
+<span>Friendship</span>
+<span class="material-symbols-outlined text-[16px] ml-0.5">check</span>
+</button>
+<!-- Selected: Networking -->
+<button class="intent-pill flex items-center gap-1.5 px-3.5 py-2 rounded-full font-label-md text-label-md bg-primary text-on-primary shadow-sm transition-all duration-150 active:scale-95 border border-primary" data-selected="true" type="button">
+<span class="text-base grayscale">💼</span>
+<span>Networking</span>
+<span class="material-symbols-outlined text-[16px] ml-0.5">check</span>
+</button>
+<!-- Unselected Pills -->
+<button class="intent-pill flex items-center gap-1.5 px-3.5 py-2 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface border border-outline-variant hover:border-on-surface hover:bg-surface-container-low transition-all duration-150 active:scale-95" data-selected="false" type="button">
+<span class="text-base grayscale">🚀</span>
+<span>Startup / Business</span>
+</button>
+<button class="intent-pill flex items-center gap-1.5 px-3.5 py-2 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface border border-outline-variant hover:border-on-surface hover:bg-surface-container-low transition-all duration-150 active:scale-95" data-selected="false" type="button">
+<span class="text-base grayscale">🏃</span>
+<span>Sports</span>
+</button>
+<button class="intent-pill flex items-center gap-1.5 px-3.5 py-2 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface border border-outline-variant hover:border-on-surface hover:bg-surface-container-low transition-all duration-150 active:scale-95" data-selected="false" type="button">
+<span class="text-base grayscale">🎮</span>
+<span>Gaming</span>
+</button>
+<button class="intent-pill flex items-center gap-1.5 px-3.5 py-2 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface border border-outline-variant hover:border-on-surface hover:bg-surface-container-low transition-all duration-150 active:scale-95" data-selected="false" type="button">
+<span class="text-base grayscale">🎨</span>
+<span>Hobbies</span>
+</button>
+<button class="intent-pill flex items-center gap-1.5 px-3.5 py-2 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface border border-outline-variant hover:border-on-surface hover:bg-surface-container-low transition-all duration-150 active:scale-95" data-selected="false" type="button">
+<span class="text-base grayscale">☕</span>
+<span>Dating</span>
+</button>
+<button class="intent-pill flex items-center gap-1.5 px-3.5 py-2 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface border border-outline-variant hover:border-on-surface hover:bg-surface-container-low transition-all duration-150 active:scale-95" data-selected="false" type="button">
+<span class="text-base grayscale">📚</span>
+<span>Study</span>
+</button>
+</div>
+</section>
+<!-- Subtle Section Divider -->
+<div class="w-full h-px bg-surface-container-highest"></div>
+<!-- Section 2: Skills (Monochrome Badges) -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-headline-md text-headline-md text-on-surface">Your skills</label>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">3 / 10 added</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant -mt-1">Show what knowledge or crafts you can exchange with neighbors.</p>
+<div class="flex flex-wrap items-center gap-2 pt-1" id="skills-container">
+<!-- Monochrome Chip 1 -->
+<div class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-highest text-on-surface border border-outline-variant font-label-md text-label-md shadow-sm">
+<span>UI/UX Design</span>
+<button aria-label="Remove UI/UX Design" class="flex items-center justify-center hover:opacity-75 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Monochrome Chip 2 -->
+<div class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-highest text-on-surface border border-outline-variant font-label-md text-label-md shadow-sm">
+<span>Product Management</span>
+<button aria-label="Remove Product Management" class="flex items-center justify-center hover:opacity-75 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Monochrome Chip 3 -->
+<div class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-highest text-on-surface border border-outline-variant font-label-md text-label-md shadow-sm">
+<span>Python</span>
+<button aria-label="Remove Python" class="flex items-center justify-center hover:opacity-75 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Add Skill Button -->
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface border border-outline-variant font-label-md text-label-md shadow-sm hover:bg-surface-container-low transition-colors duration-150" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add skill</span>
+</button>
+</div>
+</section>
+<!-- Subtle Section Divider -->
+<div class="w-full h-px bg-surface-container-highest"></div>
+<!-- Section 3: Interests (Monochrome Chips) -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-headline-md text-headline-md text-on-surface">Your interests</label>
+<span class="font-body-md text-body-md text-on-surface-variant">Passions &amp; hobbies</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant -mt-1">Common grounds make spontaneous coffee chats effortless.</p>
+<div class="flex flex-wrap items-center gap-2 pt-1" id="interests-container">
+<!-- Monochrome Chip 1 -->
+<div class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-highest text-on-surface border border-outline-variant font-label-md text-label-md shadow-sm">
+<span>Specialty Coffee</span>
+<button aria-label="Remove Specialty Coffee" class="flex items-center justify-center hover:opacity-75 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Monochrome Chip 2 -->
+<div class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-highest text-on-surface border border-outline-variant font-label-md text-label-md shadow-sm">
+<span>Bouldering</span>
+<button aria-label="Remove Bouldering" class="flex items-center justify-center hover:opacity-75 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Monochrome Chip 3 -->
+<div class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-highest text-on-surface border border-outline-variant font-label-md text-label-md shadow-sm">
+<span>Indie Music</span>
+<button aria-label="Remove Indie Music" class="flex items-center justify-center hover:opacity-75 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Add Interest Button -->
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface border border-outline-variant font-label-md text-label-md shadow-sm hover:bg-surface-container-low transition-colors duration-150" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add interest</span>
+</button>
+</div>
+</section>
+<!-- Subtle Section Divider -->
+<div class="w-full h-px bg-surface-container-highest"></div>
+<!-- Section 4: About You Bio -->
+<section class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-headline-md text-headline-md text-on-surface" for="bio-input">About you</label>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium" id="char-counter">142/300</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">A concise snapshot of your journey, current explorations, or weekend rituals.</p>
+<div class="relative mt-1">
+<textarea class="w-full bg-surface-container-lowest text-on-surface rounded-lg p-3.5 font-body-md text-body-md shadow-sm border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all placeholder:text-outline-variant resize-none" id="bio-input" maxlength="300" placeholder="Building my first startup and looking to meet people interested in technology." rows="4">Building my first startup and looking to meet people interested in technology.</textarea>
+</div>
+</section>
+</div>
+<!-- Sticky Bottom CTA Bar with Glassmorphic Scrim -->
+<div class="sticky bottom-0 left-0 right-0 pt-space-md pb-space-sm bg-gradient-to-t from-surface via-surface/90 to-transparent mt-space-lg z-20">
+<button class="w-full h-12 rounded-full bg-primary hover:bg-neutral-800 text-on-primary font-label-md text-label-md shadow-md hover:shadow-lg flex items-center justify-center gap-2 transition-all duration-200 active:scale-[0.98]" type="button">
+<span>Finish setup</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<div class="text-center mt-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">You can fine-tune your answers anytime later</span>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    // Bio character counter interactive handler
+    const bioArea = document.getElementById('bio-input');
+    const counterDisplay = document.getElementById('char-counter');
+    if (bioArea && counterDisplay) {
+      bioArea.addEventListener('input', function() {
+        const currentLength = this.value.length;
+        counterDisplay.textContent = `${currentLength}/300`;
+      });
+    }
+
+    // Interactive intent chips toggling
+    const pillGroup = document.getElementById('looking-for-group');
+    if (pillGroup) {
+      pillGroup.addEventListener('click', function(e) {
+        const btn = e.target.closest('.intent-pill');
+        if (!btn) return;
+        
+        const isSelected = btn.getAttribute('data-selected') === 'true';
+        if (isSelected) {
+          btn.setAttribute('data-selected', 'false');
+          btn.className = 'intent-pill flex items-center gap-1.5 px-3.5 py-2 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface border border-outline-variant hover:border-on-surface hover:bg-surface-container-low transition-all duration-150 active:scale-95';
+          const checkIcon = btn.querySelector('.material-symbols-outlined');
+          if (checkIcon) checkIcon.remove();
+        } else {
+          btn.setAttribute('data-selected', 'true');
+          btn.className = 'intent-pill flex items-center gap-1.5 px-3.5 py-2 rounded-full font-label-md text-label-md bg-primary text-on-primary shadow-sm transition-all duration-150 active:scale-95 border border-primary';
+          const check = document.createElement('span');
+          check.className = 'material-symbols-outlined text-[16px] ml-0.5';
+          check.textContent = 'check';
+          btn.appendChild(check);
+        }
+      });
+    }
+  })();
+</script></main></body></html>

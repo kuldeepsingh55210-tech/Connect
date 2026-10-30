@@ -1,0 +1,36 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "ConnectLocal Backend API (Node.js + Express + MongoDB)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test:profile": "node test_profile.js",
+    "seed:discover": "node scripts/seed-discover-test-data.js",
+    "test:discover": "node test_discover.js",
+    "test:connections": "node scripts/test-connections.js",
+    "test:chat": "node scripts/test-chat.js",
+    "test:trust-safety": "node scripts/test-trust-safety.js",
+    "test:photo": "node scripts/test-photo-upload.js",
+    "test:readiness": "node scripts/test-lan-readiness.js",
+    "test:safety": "node scripts/test-safety-e2e.js",
+    "test:read-receipts": "node scripts/test-read-receipts-e2e.js",
+    "test:notifications": "node scripts/test-notifications-e2e.js",
+    "test:all-safe": "node scripts/run-all-safe.js"
+  },
+  "dependencies": {
+    "cloudinary": "^2.11.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.9.5",
+    "multer": "^2.4.0",
+    "socket.io": "^4.8.3",
+    "socket.io-client": "^4.8.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
