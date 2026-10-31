@@ -127,13 +127,13 @@ ChatScreen web Enter handling: onKeyPress calls handleSend() and onSubmitEditing
 test:composer-focus is a static source check; actual focus behavior is verified manually in the browser only.
 
 ### 32. Old placeholder dev secrets present in git history
-The first git commit (Oct 30 2026) contains the old placeholder dev secrets (connectlocal_dev_secret_key_2026 / connectlocal_dev_admin_key_2026) in git history. Real .env values were rotated, so this is not exploitable, but the repo must stay private.
+The first git commit (Oct 30 2026) contains the old placeholder dev secrets (connectlocal_dev_secret_key_2026 / connectlocal_dev_admin_key_2026) and the test snapshot files in git history. Real .env values were rotated, so this is not exploitable, but the GitHub repo must stay private.
 
 ### 33. Stale root scripts/ folder
 Root scripts/ folder (seed-discover-test-data.js, test-chat.js, test-connections.js, test-trust-safety.js) looks like stale copies of apps/api/scripts files that still call seed(false). Verify and delete; running them can reset seed users.
 
 ### 34. Temporary auth mechanisms remain
-dev-login and the temporary admin key middleware remain until Firebase auth and real admin auth are built.
+dev-login and the temporary x-admin-key admin middleware remain until Firebase auth and real admin auth are built.
 
 ## 🟢 Deferred By Design, Not Urgent
 
