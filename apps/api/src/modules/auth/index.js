@@ -2,6 +2,7 @@
 
 const express = require("express");
 const jwt = require("jsonwebtoken");
+const { getJwtSecret } = require("../../config/secrets");
 const { User } = require("../../models");
 const { requireAuth } = require("../../middleware/auth");
 
@@ -37,7 +38,7 @@ router.post("/dev-login", async (req, res) => {
       });
     }
 
-    const secret = process.env.JWT_SECRET || "connectlocal_dev_secret_key_2026";
+    const secret = getJwtSecret();
     const token = jwt.sign(
       {
         id: user._id.toString(),

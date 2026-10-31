@@ -1,6 +1,7 @@
 // TEMPORARY DEV AUTH — replace with real Firebase phone OTP + Google auth before public launch. See TRD Section 6.1 /auth/otp/send and /auth/otp/verify. This must not ship to production.
 
 const jwt = require("jsonwebtoken");
+const { getJwtSecret } = require("../config/secrets");
 
 /**
  * Standard Auth Middleware
@@ -18,7 +19,7 @@ function requireAuth(req, res, next) {
   }
 
   const token = authHeader.split(" ")[1];
-  const secret = process.env.JWT_SECRET || "connectlocal_dev_secret_key_2026";
+  const secret = getJwtSecret();
 
   try {
     const decoded = jwt.verify(token, secret);

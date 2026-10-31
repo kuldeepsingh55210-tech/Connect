@@ -2,11 +2,12 @@ const express = require("express");
 const mongoose = require("mongoose");
 const { Report, User } = require("../../models");
 const { requireAuth } = require("../../middleware/auth");
+const { getAdminKey } = require("../../config/secrets");
 
 // TEMPORARY ADMIN AUTH — replace with role-based admin auth before public launch. See TRD Section 6.1.
 function requireAdminKey(req, res, next) {
   const adminKey = req.headers["x-admin-key"];
-  const expectedKey = process.env.ADMIN_KEY || "connectlocal_dev_admin_key_2026";
+  const expectedKey = getAdminKey();
 
   if (!adminKey || adminKey !== expectedKey) {
     return res.status(401).json({

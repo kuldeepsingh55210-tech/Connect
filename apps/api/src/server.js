@@ -1,3 +1,5 @@
+const path = require("path");
+require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
 require("dotenv").config();
 
 const express = require("express");
@@ -5,6 +7,7 @@ const http = require("http");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const { Server } = require("socket.io");
+const { getJwtSecret, getAdminKey } = require("./config/secrets");
 const { connectDB } = require("./db/connect");
 const authRouter = require("./modules/auth");
 const profileRouter = require("./modules/profile");
@@ -101,6 +104,10 @@ app.get("/", (req, res) => {
 let server;
 
 async function startServer() {
+  // Validate secrets fail-fast at boot time
+  getJwtSecret();
+  getAdminKey();
+
   try {
     await connectDB();
   } catch (err) {
@@ -115,7 +122,10 @@ async function startServer() {
 }
 
 if (process.env.NODE_ENV !== "test") {
-  startServer();
+  startServer().catch((err) => {
+    console.error(`Startup failure: ${err.message}`);
+    process.exit(1);
+  });
 }
 
 module.exports = {

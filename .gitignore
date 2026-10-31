@@ -12,6 +12,8 @@ node_modules/
 .env.development.local
 .env.test.local
 .env.production.local
+!*.env.example
+!.env.example
 
 # Expo
 .expo/
@@ -39,3 +41,5 @@ yarn-error.log*
 Thumbs.db
 .vscode/
 .idea/
+apps/api/scripts/.seed-snapshot-temp.json
+apps/api/scripts/seed-snapshot.json

@@ -126,20 +126,29 @@ ChatScreen web Enter handling: onKeyPress calls handleSend() and onSubmitEditing
 ### 31. test:composer-focus is a static source check
 test:composer-focus is a static source check; actual focus behavior is verified manually in the browser only.
 
+### 32. Old placeholder dev secrets present in git history
+The first git commit (Oct 30 2026) contains the old placeholder dev secrets (connectlocal_dev_secret_key_2026 / connectlocal_dev_admin_key_2026) in git history. Real .env values were rotated, so this is not exploitable, but the repo must stay private.
+
+### 33. Stale root scripts/ folder
+Root scripts/ folder (seed-discover-test-data.js, test-chat.js, test-connections.js, test-trust-safety.js) looks like stale copies of apps/api/scripts files that still call seed(false). Verify and delete; running them can reset seed users.
+
+### 34. Temporary auth mechanisms remain
+dev-login and the temporary admin key middleware remain until Firebase auth and real admin auth are built.
+
 ## 🟢 Deferred By Design, Not Urgent
 
-### 32. Discover Tier 3 (network suggestions) not built
+### 35. Discover Tier 3 (network suggestions) not built
 Intentionally sequenced after Connections existed. Low priority — Tier 1
 and Tier 2 alone deliver the core value proposition.
 
-### 33. Discover filter icon is decorative (no handler)
+### 36. Discover filter icon is decorative (no handler)
 The filter button (`Ionicons options-outline`) in the Discover screen sub-bar is currently a non-functional/decorative placeholder. (The notification bell is now functional and wired to NotificationsScreen).
 
-### 34. No settings/edit-profile screen
+### 37. No settings/edit-profile screen
 Users can only set their photo/skills/interests/about once, during the
 initial Create Profile flow — no way to edit afterward yet.
 
-### 35. Socket.io has no Redis adapter
+### 38. Socket.io has no Redis adapter
 Fine at single-instance MVP scale. Must be added before horizontally
 scaling the API behind a load balancer (TRD Section 6.4) — do this at
 that transition point, not preemptively.

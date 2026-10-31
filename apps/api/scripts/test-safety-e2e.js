@@ -19,11 +19,12 @@ const mongoose = require("mongoose");
 const { io: ClientIO } = require("socket.io-client");
 const { app, httpServer, io } = require("../src/server");
 const { connectDB } = require("../src/db/connect");
+const { getAdminKey } = require("../src/config/secrets");
 const { User, Connection, Message, Report } = require("../src/models");
 
 const PORT = 4015;
 const BASE_URL = `http://localhost:${PORT}`;
-const ADMIN_KEY = process.env.ADMIN_KEY || "connectlocal_dev_admin_key_2026";
+const ADMIN_KEY = getAdminKey();
 
 const THROWAWAY_PHONES = [
   "+919876543401", // User A / User E1

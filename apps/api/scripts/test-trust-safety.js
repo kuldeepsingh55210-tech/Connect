@@ -8,10 +8,11 @@ const mongoose = require("mongoose");
 const { app } = require("../src/server");
 const { connectDB } = require("../src/db/connect");
 const { User, Connection, Report } = require("../src/models");
+const { getAdminKey } = require("../src/config/secrets");
 const { RANGES, assertThrowaway, createThrowawayUser, cleanupThrowaway } = require("./lib/throwaway");
 
 const BASE_URL = "http://localhost:4009";
-const ADMIN_KEY = process.env.ADMIN_KEY || "connectlocal_dev_admin_key_2026";
+const ADMIN_KEY = getAdminKey();
 const PHONES = RANGES.API_TRUST_SAFETY;
 PHONES.forEach((p) => assertThrowaway(p));
 

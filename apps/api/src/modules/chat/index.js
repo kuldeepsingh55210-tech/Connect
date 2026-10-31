@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
+const { getJwtSecret } = require("../../config/secrets");
 const { Message, Connection } = require("../../models");
 const { requireAuth } = require("../../middleware/auth");
 const {
@@ -307,7 +308,7 @@ function initChatSocket(io) {
       return next(new Error("Authentication error: Token missing"));
     }
 
-    const secret = process.env.JWT_SECRET || "connectlocal_dev_secret_key_2026";
+    const secret = getJwtSecret();
     try {
       const decoded = jwt.verify(token, secret);
       socket.data.userId = (decoded.id || decoded.userId).toString();
