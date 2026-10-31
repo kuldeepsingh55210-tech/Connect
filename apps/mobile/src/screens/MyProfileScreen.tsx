@@ -214,15 +214,14 @@ export const MyProfileScreen: React.FC<MyProfileScreenProps> = ({
             </View>
           ) : null}
 
-          {/* Card 3: Craft & Skills */}
+          {/* Card 3: Skills */}
           {profile?.skills && profile.skills.length > 0 && (
             <View style={styles.detailCard}>
               <View style={styles.cardHeader}>
                 <View style={styles.cardHeaderLeft}>
                   <Ionicons name="hardware-chip-outline" size={17} color={COLORS.primary} />
-                  <Text style={styles.cardHeading}>Craft & Skills</Text>
+                  <Text style={styles.cardHeading}>Skills</Text>
                 </View>
-                <Text style={styles.cardTag}>OFFERINGS</Text>
               </View>
               <View style={styles.pillsWrap}>
                 {profile.skills.map((skill, idx) => (
@@ -234,15 +233,14 @@ export const MyProfileScreen: React.FC<MyProfileScreenProps> = ({
             </View>
           )}
 
-          {/* Card 4: Passions & Interests */}
+          {/* Card 4: Interests */}
           {profile?.interests && profile.interests.length > 0 && (
             <View style={styles.detailCard}>
               <View style={styles.cardHeader}>
                 <View style={styles.cardHeaderLeft}>
                   <Ionicons name="color-palette-outline" size={17} color={COLORS.primary} />
-                  <Text style={styles.cardHeading}>Passions & Interests</Text>
+                  <Text style={styles.cardHeading}>Interests</Text>
                 </View>
-                <Text style={styles.cardTag}>LEISURE</Text>
               </View>
               <View style={styles.pillsWrap}>
                 {profile.interests.map((interest, idx) => (

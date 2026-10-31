@@ -278,10 +278,6 @@ export const ProfileViewScreen: React.FC<ProfileViewScreenProps> = ({
                 </View>
               )}
             </View>
-            {/* Verified badge (decorative per requirement) */}
-            <View style={styles.verifiedBadge}>
-              <Ionicons name="checkmark-circle" size={20} color="#ffffff" />
-            </View>
           </View>
 
           {/* Name & City — IMPORTANT: Age is omitted per requirements */}
@@ -338,15 +334,14 @@ export const ProfileViewScreen: React.FC<ProfileViewScreenProps> = ({
             </View>
           ) : null}
 
-          {/* Card 3: Skills / Offerings */}
+          {/* Card 3: Skills */}
           {profile.skills && profile.skills.length > 0 && (
             <View style={styles.detailCard}>
               <View style={styles.cardHeader}>
                 <View style={styles.cardHeaderLeft}>
                   <Ionicons name="hardware-chip-outline" size={17} color={COLORS.primary} />
-                  <Text style={styles.cardHeading}>Craft & Skills</Text>
+                  <Text style={styles.cardHeading}>Skills</Text>
                 </View>
-                <Text style={styles.cardTag}>OFFERINGS</Text>
               </View>
               <View style={styles.pillsWrap}>
                 {profile.skills.map((skill, idx) => (
@@ -358,15 +353,14 @@ export const ProfileViewScreen: React.FC<ProfileViewScreenProps> = ({
             </View>
           )}
 
-          {/* Card 4: Interests / Leisure */}
+          {/* Card 4: Interests */}
           {profile.interests && profile.interests.length > 0 && (
             <View style={styles.detailCard}>
               <View style={styles.cardHeader}>
                 <View style={styles.cardHeaderLeft}>
                   <Ionicons name="color-palette-outline" size={17} color={COLORS.primary} />
-                  <Text style={styles.cardHeading}>Passions & Interests</Text>
+                  <Text style={styles.cardHeading}>Interests</Text>
                 </View>
-                <Text style={styles.cardTag}>LEISURE</Text>
               </View>
               <View style={styles.pillsWrap}>
                 {profile.interests.map((interest, idx) => (
@@ -766,19 +760,6 @@ const styles = StyleSheet.create({
     height: '100%',
     borderRadius: 56,
     backgroundColor: COLORS.surfaceContainerLow,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  verifiedBadge: {
-    position: 'absolute',
-    bottom: 4,
-    right: 4,
-    width: 28,
-    height: 28,
-    borderRadius: 14,
-    backgroundColor: COLORS.primary,
-    borderWidth: 2,
-    borderColor: COLORS.surface,
     alignItems: 'center',
     justifyContent: 'center',
   },

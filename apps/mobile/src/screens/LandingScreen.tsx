@@ -92,7 +92,7 @@ export const LandingScreen: React.FC<LandingScreenProps> = ({ navigation }) => {
                 strokeWidth={1.5}
               />
 
-              {/* Node 1: Left - Woodcraft/Tools (Black) */}
+              {/* Node 1: Left - AI (Black) */}
               <G x={36} y={80}>
                 <Circle cx={24} cy={24} r={24} fill="#f4f4f5" stroke="#e4e4e7" strokeWidth={1} />
                 <Circle cx={24} cy={24} r={20} fill="#18181b" />
@@ -118,80 +118,72 @@ export const LandingScreen: React.FC<LandingScreenProps> = ({ navigation }) => {
               </G>
 
               {/* Micro floating skill chips */}
-              {/* Woodcraft */}
+              {/* AI */}
               <Rect
-                x={18}
+                x={32}
                 y={44}
-                width={78}
+                width={52}
                 height={24}
                 rx={12}
                 fill="#FFFFFF"
                 stroke="#e4e4e7"
                 strokeWidth={1}
               />
-              <Circle cx={28} cy={56} r={3.5} fill="#18181b" />
+              <Circle cx={42} cy={56} r={3.5} fill="#18181b" />
               <SvgText
-                x={35}
+                x={50}
                 y={59}
                 fill="#18181b"
                 fontSize={10}
                 fontWeight="600"
               >
-                Woodcraft
+                AI
               </SvgText>
 
-              {/* Ceramics */}
+              {/* Design */}
               <Rect
-                x={182}
+                x={184}
                 y={46}
-                width={76}
+                width={72}
                 height={24}
                 rx={12}
                 fill="#FFFFFF"
                 stroke="#e4e4e7"
                 strokeWidth={1}
               />
-              <Circle cx={192} cy={58} r={3.5} fill="#52525b" />
+              <Circle cx={194} cy={58} r={3.5} fill="#52525b" />
               <SvgText
-                x={199}
+                x={201}
                 y={61}
                 fill="#18181b"
                 fontSize={10}
                 fontWeight="600"
               >
-                Ceramics
+                Design
               </SvgText>
 
-              {/* Permaculture */}
+              {/* Football */}
               <Rect
-                x={90}
+                x={98}
                 y={150}
-                width={98}
+                width={82}
                 height={24}
                 rx={12}
                 fill="#FFFFFF"
                 stroke="#e4e4e7"
                 strokeWidth={1}
               />
-              <Circle cx={102} cy={162} r={3.5} fill="#27272a" />
+              <Circle cx={108} cy={162} r={3.5} fill="#27272a" />
               <SvgText
-                x={110}
+                x={116}
                 y={165}
                 fill="#18181b"
                 fontSize={10}
                 fontWeight="600"
               >
-                Permaculture
+                Football
               </SvgText>
             </Svg>
-          </View>
-
-          {/* Neighbors active count pill */}
-          <View style={styles.activeCounterBadge}>
-            <View style={styles.pulsingDot} />
-            <Text style={styles.activeCounterText}>
-              1,420 neighbors active this week
-            </Text>
           </View>
         </View>
 
@@ -357,30 +349,6 @@ const styles = StyleSheet.create({
     height: 190,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  activeCounterBadge: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-    paddingHorizontal: 12,
-    paddingVertical: 5,
-    borderRadius: BORDER_RADIUS.full,
-    backgroundColor: COLORS.surfaceContainerHigh,
-    borderColor: COLORS.outlineVariant,
-    borderWidth: 1,
-    marginTop: 4,
-  },
-  pulsingDot: {
-    width: 7,
-    height: 7,
-    borderRadius: 3.5,
-    backgroundColor: COLORS.primary,
-  },
-  activeCounterText: {
-    fontSize: 11,
-    fontWeight: '600',
-    color: COLORS.onSurface,
-    letterSpacing: 0.1,
   },
   textBlock: {
     alignItems: 'center',

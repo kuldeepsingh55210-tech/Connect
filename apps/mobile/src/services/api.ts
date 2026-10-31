@@ -1,9 +1,8 @@
 import { Platform } from 'react-native';
 
-// Set to host LAN IP for physical device testing via Expo Go or local Wi-Fi.
-// Override via EXPO_PUBLIC_API_URL if defined.
+// Development fallback to localhost:4000; production environments must set EXPO_PUBLIC_API_URL.
 export const API_BASE_URL =
-  process.env.EXPO_PUBLIC_API_URL || 'http://10.146.195.195:4000';
+  process.env.EXPO_PUBLIC_API_URL || 'http://localhost:4000';
 
 let authToken: string | null = null;
 

@@ -46,7 +46,7 @@ export function useNotificationUnread(
   const activeConnectionId = options.activeConnectionId;
 
   const [unreadCount, setUnreadCount] = useState<number>(0);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const fetchCount = useCallback(async () => {
     // Only fetch if authenticated and app is active

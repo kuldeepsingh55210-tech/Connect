@@ -10,6 +10,7 @@ import {
   ActivityIndicator,
   Animated,
   Platform,
+  Share,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons, Feather } from '@expo/vector-icons';
@@ -30,6 +31,21 @@ import { useNotificationUnread } from '../hooks/useNotificationUnread';
 interface DiscoverScreenProps {
   navigation?: any;
   onTabChange?: (tab: 'discover' | 'connections' | 'chat' | 'profile') => void;
+}
+
+export type DiscoverEmptyState = 'none' | 'tier1-empty' | 'all-empty';
+
+export function getDiscoverEmptyState(
+  tier1Count: number,
+  tier2Count: number
+): DiscoverEmptyState {
+  if (tier1Count === 0 && tier2Count === 0) {
+    return 'all-empty';
+  }
+  if (tier1Count === 0 && tier2Count > 0) {
+    return 'tier1-empty';
+  }
+  return 'none';
 }
 
 export const DiscoverScreen: React.FC<DiscoverScreenProps> = ({
@@ -142,6 +158,32 @@ export const DiscoverScreen: React.FC<DiscoverScreenProps> = ({
       showToast('Network error while connecting.', 'error');
     } finally {
       setConnectingUserId(null);
+    }
+  };
+
+  const handleInvite = async () => {
+    // TODO: Add real app link (e.g. https://connectlocal.in/download) before public launch
+    const shareMessage = 'Join me on ConnectLocal';
+    try {
+      if (Platform.OS === 'web') {
+        if (typeof navigator !== 'undefined' && (navigator as any).share) {
+          await (navigator as any).share({
+            title: 'ConnectLocal',
+            text: shareMessage,
+          });
+        } else if (typeof navigator !== 'undefined' && navigator.clipboard?.writeText) {
+          await navigator.clipboard.writeText(shareMessage);
+          showToast('Link copied', 'success');
+        } else {
+          showToast('Link copied', 'success');
+        }
+      } else {
+        await Share.share({
+          message: shareMessage,
+        });
+      }
+    } catch (err: any) {
+      // User dismissed or cancelled share
     }
   };
 
@@ -302,7 +344,7 @@ export const DiscoverScreen: React.FC<DiscoverScreenProps> = ({
   };
 
   const displayCity = currentUser?.city || 'Delhi';
-  const isFeedEmpty = tier1.length === 0 && tier2.length === 0;
+  const emptyState = getDiscoverEmptyState(tier1.length, tier2.length);
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
@@ -380,10 +422,6 @@ export const DiscoverScreen: React.FC<DiscoverScreenProps> = ({
               <Text style={styles.cityPillText}>{displayCity}</Text>
             </View>
           </View>
-
-          <TouchableOpacity style={styles.filterBtn} accessibilityLabel="Filter peers">
-            <Ionicons name="options-outline" size={18} color={COLORS.onSurface} />
-          </TouchableOpacity>
         </View>
 
         {isLoading ? (
@@ -391,26 +429,49 @@ export const DiscoverScreen: React.FC<DiscoverScreenProps> = ({
             <ActivityIndicator size="large" color={COLORS.primary} />
             <Text style={styles.loadingText}>Finding peers near you...</Text>
           </View>
-        ) : isFeedEmpty ? (
-          /* 4. Empty State per PRD Section 5.3 */
+        ) : emptyState === 'all-empty' ? (
+          /* 4. Both tiers empty: full empty state (centered, hairline card) per PRD Section 5.3 */
           <View style={styles.emptyStateCard}>
             <View style={styles.emptyIconCircle}>
-              <Ionicons name="planet-outline" size={32} color={COLORS.primary} />
+              <Ionicons name="people-outline" size={30} color={COLORS.primary} />
             </View>
             <Text style={styles.emptyTitle}>No one nearby yet</Text>
             <Text style={styles.emptyMessage}>
-              No one nearby yet — invite a friend to grow your city's network
+              Invite a friend to grow your city's network.
             </Text>
-            <TouchableOpacity
-              style={styles.emptyActionBtn}
-              onPress={onRefresh}
-            >
-              <Ionicons name="refresh" size={15} color="#ffffff" />
-              <Text style={styles.emptyActionBtnText}>Refresh Feed</Text>
-            </TouchableOpacity>
+            <View style={styles.emptyActionsRow}>
+              <TouchableOpacity
+                style={styles.primaryPillBtn}
+                onPress={handleInvite}
+                accessibilityLabel="Invite a friend"
+              >
+                <Ionicons name="share-outline" size={15} color="#ffffff" />
+                <Text style={styles.primaryPillBtnText}>Invite a friend</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={styles.ghostPillBtn}
+                onPress={onRefresh}
+                accessibilityLabel="Refresh"
+              >
+                <Ionicons name="refresh" size={15} color={COLORS.onSurface} />
+                <Text style={styles.ghostPillBtnText}>Refresh</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         ) : (
           <>
+            {/* Hairline card when Tier 1 is empty but Tier 2 is not */}
+            {emptyState === 'tier1-empty' && (
+              <View style={styles.tier1EmptyCard}>
+                <Text style={styles.tier1EmptyTitle}>
+                  No one in {displayCity} shares your skills yet
+                </Text>
+                <Text style={styles.tier1EmptySubtitle}>
+                  Showing people in other cities with the same skills or interests.
+                </Text>
+              </View>
+            )}
+
             {/* 5. Section 1: 🔥 Same city, same skill (Tier 1) */}
             {tier1.length > 0 && (
               <View style={styles.sectionContainer}>
@@ -650,16 +711,6 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: COLORS.onSurface,
   },
-  filterBtn: {
-    width: 36,
-    height: 36,
-    borderRadius: 18,
-    backgroundColor: COLORS.surfaceContainerLow,
-    borderWidth: 1,
-    borderColor: COLORS.outlineVariant,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   sectionContainer: {
     marginTop: SPACING.sm,
     marginBottom: SPACING.lg,
@@ -833,6 +884,27 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: COLORS.onSurfaceVariant,
   },
+  tier1EmptyCard: {
+    backgroundColor: COLORS.surfaceContainerLowest,
+    borderRadius: 16,
+    borderWidth: 1,
+    borderColor: COLORS.surfaceContainerHighest,
+    padding: SPACING.md,
+    marginHorizontal: SPACING.marginMobile,
+    marginBottom: SPACING.md,
+    gap: 4,
+  },
+  tier1EmptyTitle: {
+    fontSize: 15,
+    fontWeight: '700',
+    color: COLORS.onSurface,
+    letterSpacing: -0.2,
+  },
+  tier1EmptySubtitle: {
+    fontSize: 13,
+    color: COLORS.onSurfaceVariant,
+    lineHeight: 18,
+  },
   emptyStateCard: {
     margin: SPACING.marginMobile,
     padding: 24,
@@ -863,20 +935,41 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     lineHeight: 19,
   },
-  emptyActionBtn: {
+  emptyActionsRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    marginTop: 8,
+  },
+  primaryPillBtn: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
     backgroundColor: COLORS.primary,
     paddingHorizontal: 18,
-    paddingVertical: 9,
+    paddingVertical: 10,
     borderRadius: BORDER_RADIUS.full,
-    marginTop: 8,
   },
-  emptyActionBtnText: {
+  primaryPillBtnText: {
     fontSize: 13,
     fontWeight: '600',
     color: '#ffffff',
+  },
+  ghostPillBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    backgroundColor: COLORS.surfaceContainerLow,
+    borderWidth: 1,
+    borderColor: COLORS.surfaceContainerHighest,
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    borderRadius: BORDER_RADIUS.full,
+  },
+  ghostPillBtnText: {
+    fontSize: 13,
+    fontWeight: '600',
+    color: COLORS.onSurface,
   },
   toastContainer: {
     position: 'absolute',

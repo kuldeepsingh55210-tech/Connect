@@ -254,7 +254,7 @@ export const CreateProfileScreen: React.FC<CreateProfileScreenProps> = ({
 
             <View style={styles.stepPill}>
               <Ionicons name="shield" size={13} color={COLORS.primary} />
-              <Text style={styles.stepPillText}>STEP 3 OF 4</Text>
+              <Text style={styles.stepPillText}>STEP 2 OF 2</Text>
             </View>
 
             <TouchableOpacity
@@ -265,12 +265,10 @@ export const CreateProfileScreen: React.FC<CreateProfileScreenProps> = ({
             </TouchableOpacity>
           </View>
 
-          {/* Stepper bar with Step 1, 2, 3 active */}
+          {/* Stepper bar with Step 1 and 2 active */}
           <View style={styles.stepperBar}>
             <View style={[styles.stepSegment, styles.stepSegmentActive]} />
             <View style={[styles.stepSegment, styles.stepSegmentActive]} />
-            <View style={[styles.stepSegment, styles.stepSegmentActive]} />
-            <View style={styles.stepSegment} />
           </View>
         </View>
 
@@ -400,7 +398,7 @@ export const CreateProfileScreen: React.FC<CreateProfileScreenProps> = ({
             <Text style={styles.sectionHint}>{selectedSkills.length} / 10 added</Text>
           </View>
           <Text style={styles.sectionSubtitle}>
-            Show what knowledge or crafts you can exchange with neighbors.
+            Show what knowledge or skills you can share with others.
           </Text>
 
           {/* Selected Skills Chips */}
@@ -485,7 +483,7 @@ export const CreateProfileScreen: React.FC<CreateProfileScreenProps> = ({
             </Text>
           </View>
           <Text style={styles.sectionSubtitle}>
-            Common grounds make spontaneous coffee chats effortless.
+            Common ground makes it easy to start a conversation.
           </Text>
 
           {/* Selected Interests Chips */}

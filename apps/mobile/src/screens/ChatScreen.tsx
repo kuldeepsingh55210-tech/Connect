@@ -285,7 +285,7 @@ export const ChatScreen: React.FC<ChatScreenProps> = ({ navigation, route }) => 
     isFocusedRef.current = isFocused;
   }, [isFocused]);
 
-  const debouncedMarkReadTimer = useRef<NodeJS.Timeout | null>(null);
+  const debouncedMarkReadTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const triggerDebouncedMarkRead = useCallback(() => {
     if (debouncedMarkReadTimer.current) {
@@ -606,10 +606,6 @@ export const ChatScreen: React.FC<ChatScreenProps> = ({ navigation, route }) => 
     }
   };
 
-  const handleQuickSuggest = (text: string) => {
-    setInputText(text);
-  };
-
   return (
     <SafeAreaView style={styles.container} edges={['top', 'bottom']}>
       {/* 1. Header Bar matching design-chat */}
@@ -641,7 +637,6 @@ export const ChatScreen: React.FC<ChatScreenProps> = ({ navigation, route }) => 
                   <Ionicons name="person" size={18} color={COLORS.secondary} />
                 </View>
               )}
-              <View style={styles.onlineDot} />
             </View>
 
             <View style={styles.headerTextCol}>
@@ -649,19 +644,16 @@ export const ChatScreen: React.FC<ChatScreenProps> = ({ navigation, route }) => 
                 <Text style={styles.headerNameText} numberOfLines={1}>
                   {otherUser?.name || 'Connection'}
                 </Text>
-                <Ionicons
-                  name="checkmark-circle"
-                  size={14}
-                  color={COLORS.primary}
-                />
               </View>
               {/* Privacy constraint: city name only (no neighborhood or distance) */}
-              <View style={styles.statusRow}>
-                <View style={styles.statusDot} />
-                <Text style={styles.statusText} numberOfLines={1}>
-                  {otherUser?.city ? `Active in ${otherUser.city}` : 'Connected neighbor'}
-                </Text>
-              </View>
+              {otherUser?.city ? (
+                <View style={styles.statusRow}>
+                  <Ionicons name="location-sharp" size={12} color={COLORS.secondary} />
+                  <Text style={styles.statusText} numberOfLines={1}>
+                    {otherUser.city}
+                  </Text>
+                </View>
+              ) : null}
             </View>
           </TouchableOpacity>
         </View>
@@ -804,24 +796,6 @@ export const ChatScreen: React.FC<ChatScreenProps> = ({ navigation, route }) => 
               });
             })()
           )}
-
-          {/* Quick Suggestion Pill matching design */}
-          <View style={styles.suggestionRow}>
-            <TouchableOpacity
-              style={styles.suggestionPill}
-              activeOpacity={0.8}
-              onPress={() =>
-                handleQuickSuggest(
-                  `Hey ${otherUser?.name || 'there'}, great to connect! Would love to grab coffee and chat skills soon.`
-                )
-              }
-            >
-              <Ionicons name="cafe-outline" size={15} color={COLORS.onSurface} />
-              <Text style={styles.suggestionText}>
-                Suggest: Coffee meetup ☕
-              </Text>
-            </TouchableOpacity>
-          </View>
         </ScrollView>
 
         {/* 3. Sticky Bottom Input Deck matching design-chat */}
@@ -1170,17 +1144,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  onlineDot: {
-    position: 'absolute',
-    bottom: 0,
-    right: 0,
-    width: 10,
-    height: 10,
-    borderRadius: 5,
-    backgroundColor: COLORS.primary,
-    borderWidth: 2,
-    borderColor: '#ffffff',
-  },
   headerTextCol: {
     flex: 1,
     gap: 1,
@@ -1199,12 +1162,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 5,
-  },
-  statusDot: {
-    width: 5,
-    height: 5,
-    borderRadius: 2.5,
-    backgroundColor: COLORS.primary,
   },
   statusText: {
     fontSize: 11.5,
@@ -1371,26 +1328,6 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-end',
     marginTop: 2,
     marginRight: 2,
-  },
-  suggestionRow: {
-    alignItems: 'center',
-    marginTop: 8,
-  },
-  suggestionPill: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-    paddingHorizontal: 14,
-    paddingVertical: 7,
-    borderRadius: BORDER_RADIUS.full,
-    backgroundColor: COLORS.surfaceContainerHighest,
-    borderWidth: 1,
-    borderColor: COLORS.outlineVariant,
-  },
-  suggestionText: {
-    fontSize: 12,
-    fontWeight: '500',
-    color: COLORS.onSurface,
   },
   inputDeck: {
     backgroundColor: COLORS.surfaceContainerLowest,

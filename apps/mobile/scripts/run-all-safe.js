@@ -28,6 +28,8 @@ const SUITES = [
   { name: 'Read Receipts Flow (test-read-receipts-flow.js)', file: 'scripts/test-read-receipts-flow.js' },
   { name: 'Notifications Unit (test-notifications-unit.js)', file: 'scripts/test-notifications-unit.js' },
   { name: 'Notifications Flow (test-notifications-flow.js)', file: 'scripts/test-notifications-flow.js' },
+  { name: 'No Placeholders Check (test-no-placeholders.js)', file: 'scripts/test-no-placeholders.js' },
+  { name: 'Discover Empty State (test-discover-empty-state.js)', file: 'scripts/test-discover-empty-state.js' },
 ];
 
 async function main() {

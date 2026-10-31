@@ -379,7 +379,7 @@ export const ConnectionsScreen: React.FC<ConnectionsScreenProps> = ({
         <View style={styles.sectionTitleRow}>
           <Text style={styles.sectionTitleText}>
             {activeTab === 'requests' && `INCOMING REQUESTS (${requests.length})`}
-            {activeTab === 'connected' && `CONNECTED NEIGHBORS (${connected.length})`}
+            {activeTab === 'connected' && `CONNECTED PEOPLE (${connected.length})`}
             {activeTab === 'sent' && `SENT REQUESTS (${sent.length})`}
           </Text>
         </View>
@@ -458,7 +458,6 @@ export const ConnectionsScreen: React.FC<ConnectionsScreenProps> = ({
                             />
                           </View>
                         )}
-                        <View style={styles.onlineDot} />
                       </View>
 
                       <View style={styles.cardMainCol}>
@@ -562,7 +561,6 @@ export const ConnectionsScreen: React.FC<ConnectionsScreenProps> = ({
                           />
                         </View>
                       )}
-                      <View style={styles.onlineDot} />
                     </View>
 
                     <View style={styles.connectedTextCol}>
@@ -657,7 +655,7 @@ export const ConnectionsScreen: React.FC<ConnectionsScreenProps> = ({
           <View style={styles.promptTextCol}>
             <Text style={styles.promptTitle}>Grow your local circle</Text>
             <Text style={styles.promptDesc}>
-              Introduce yourself to neighbors who share your skills and passions.
+              Introduce yourself to people who share your skills and interests.
             </Text>
           </View>
         </View>
@@ -995,17 +993,6 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.surfaceContainerLow,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  onlineDot: {
-    position: 'absolute',
-    bottom: 0,
-    right: 0,
-    width: 12,
-    height: 12,
-    borderRadius: 6,
-    backgroundColor: COLORS.primary,
-    borderWidth: 2,
-    borderColor: '#ffffff',
   },
   cardMainCol: {
     flex: 1,

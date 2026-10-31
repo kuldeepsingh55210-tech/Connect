@@ -8,7 +8,7 @@ import {
   ScrollView,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Ionicons, MaterialIcons, Feather } from '@expo/vector-icons';
+import { Ionicons, Feather } from '@expo/vector-icons';
 import { COLORS, SPACING, BORDER_RADIUS } from '../constants/theme';
 import { DatePickerInput } from '../components/DatePickerInput';
 
@@ -125,7 +125,7 @@ export const SignupScreen: React.FC<SignupScreenProps> = ({ navigation }) => {
 
             <View style={styles.stepPill}>
               <Ionicons name="shield" size={13} color={COLORS.primary} />
-              <Text style={styles.stepPillText}>STEP 1 OF 4</Text>
+              <Text style={styles.stepPillText}>STEP 1 OF 2</Text>
             </View>
 
             <View style={styles.topNavSpacer} />
@@ -134,8 +134,6 @@ export const SignupScreen: React.FC<SignupScreenProps> = ({ navigation }) => {
           {/* Segmented Stepper Bar */}
           <View style={styles.stepperBar}>
             <View style={[styles.stepSegment, styles.stepSegmentActive]} />
-            <View style={styles.stepSegment} />
-            <View style={styles.stepSegment} />
             <View style={styles.stepSegment} />
           </View>
         </View>
@@ -148,7 +146,7 @@ export const SignupScreen: React.FC<SignupScreenProps> = ({ navigation }) => {
           </View>
           <Text style={styles.mainHeading}>Let's get to know you</Text>
           <Text style={styles.subtitle}>
-            Create your verified local account to safely discover neighbors, share skills, and build community.
+            Create your local account to safely discover people, share skills, and build community.
           </Text>
         </View>
 
@@ -407,23 +405,7 @@ export const SignupScreen: React.FC<SignupScreenProps> = ({ navigation }) => {
           </View>
         </View>
 
-        {/* 5. Community Vibe Card */}
-        <View style={styles.communityCard}>
-          <View style={styles.communityIconBox}>
-            <Ionicons name="people" size={22} color={COLORS.zincBlack} />
-          </View>
-          <View style={styles.communityTextBox}>
-            <View style={styles.communityTitleRow}>
-              <MaterialIcons name="handshake" size={16} color={COLORS.onSurface} />
-              <Text style={styles.communityTitle}>12,400+ Active Neighbors</Text>
-            </View>
-            <Text style={styles.communityDescription}>
-              Meet makers, helpers, and local friends right nearby.
-            </Text>
-          </View>
-        </View>
-
-        {/* 6. Action Button & Terms */}
+        {/* 5. Action Button & Terms */}
         <View style={styles.footerContainer}>
           <TouchableOpacity
             style={[
@@ -752,43 +734,6 @@ const styles = StyleSheet.create({
   cityChipTextActive: {
     color: '#ffffff',
     fontWeight: '600',
-  },
-  communityCard: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: COLORS.surfaceContainerLowest,
-    borderColor: COLORS.outlineVariant,
-    borderWidth: 1,
-    borderRadius: 20,
-    padding: 14,
-    marginVertical: SPACING.md,
-    gap: 12,
-  },
-  communityIconBox: {
-    width: 44,
-    height: 44,
-    borderRadius: 12,
-    backgroundColor: COLORS.surfaceContainer,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  communityTextBox: {
-    flex: 1,
-  },
-  communityTitleRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 5,
-  },
-  communityTitle: {
-    fontSize: 12,
-    fontWeight: '700',
-    color: COLORS.onSurface,
-  },
-  communityDescription: {
-    fontSize: 11,
-    color: COLORS.onSurfaceVariant,
-    marginTop: 2,
   },
   footerContainer: {
     marginTop: SPACING.sm,

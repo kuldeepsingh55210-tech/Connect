@@ -56,99 +56,87 @@ Test users exist in MongoDB Atlas (`Dev User` x4, `Priya Sharma` x2 (***3215, **
 ### 8. LoginScreen with unknown phone auto-creates stub user
 LoginScreen with an unknown phone auto-creates a stub 'Dev User' (Bangalore, profileCompleted false) and goes straight to MainTabs.
 
-### 9. Signup stepper labels mismatch
-Signup stepper labels say STEP 1 OF 4 and STEP 3 OF 4 but only 2 screens exist.
-
-### 10. Landing screen Stitch placeholder content
-Landing screen still shows Stitch placeholders: '1,420 neighbors active this week', Woodcraft/Ceramics/Permaculture illustration.
-
-### 11. My Profile copy Stitch wording
-My Profile copy still uses Stitch wording: 'Craft & Skills', 'OFFERINGS', 'LEISURE', 'Passions & Interests'.
-
-### 12. Phone to laptop API reachability fails on Windows Public network
+### 9. Phone to laptop API reachability fails on Windows Public network
 Phone to laptop API reachability fails on port 4000 over Windows network profile 'Public'.
 Not a code bug. Resolved long-term by deploying API to HTTPS host (Phase 0.2).
 
-### 13. api.ts stale hardcoded fallback API URL
-api.ts still has a stale hardcoded fallback API URL (http://10.146.195.195:4000). Remove; it is only used when EXPO_PUBLIC_API_URL is missing.
-
-### 14. scripts/test-chat-e2e.js writes real messages into DB
+### 10. scripts/test-chat-e2e.js writes real messages into DB
 scripts/test-chat-e2e.js writes real messages into the DB on every run. Use a test database or clean up before launch.
 
-### 15. Duplicate-report check is not atomic
+### 11. Duplicate-report check is not atomic
 Duplicate-report check is not atomic (find then insert). Two simultaneous requests from the same reporter could create two open reports. Auto-hide still needs 3 distinct reporters so it cannot be abused to hide a user. Fix with a partial unique index or findOneAndUpdate upsert.
 
-### 16. Block and unmatch do not remove already-connected sockets from chat room
+### 12. Block and unmatch do not remove already-connected sockets from chat room
 Block and unmatch do not remove already-connected sockets from the chat room; message:send is rejected, so this is low risk.
 
-### 17. Leftover test data in the dev DB
+### 13. Leftover test data in the dev DB
 Leftover test data in the dev DB (Aanya Sen and Vikram Das from an older signup test at +919876543301/02, Dev User stubs, duplicate Priya Sharma, test messages in the Priya-Aarav thread, Kabir/Priya test connection). Needs a safe cleanup task.
 
-### 18. Chat header still shows Stitch placeholders
-'Active in <city>' with a presence dot, a verified tick next to the name (no verification exists), and a 'Suggest: Coffee meetup' button.
-
-### 19. Old diagnostic/test messages exist in Priya-Aarav thread
+### 14. Old diagnostic/test messages exist in Priya-Aarav thread
 Old diagnostic/test messages ('Real-time diagnostic message from Priya via REST', 'Real-time socket message:send from Priya test ...', etc.) exist in the Priya-Aarav thread; clean before launch.
 
-### 20. Missing status query in GET /api/connections treated as accepted
+### 15. Missing status query in GET /api/connections treated as accepted
 GET /api/connections treats a missing status query as accepted (isAccepted = !status || status === 'accepted'), which would run the message aggregation for any call without a status. Check whether any caller omits status.
 
-### 21. REST POST /:id/read emits message:read to whole room including reader
+### 16. REST POST /:id/read emits message:read to whole room including reader
 REST POST /:id/read emits message:read to the whole room including the reader; the socket handler excludes the reader. Clients must ignore events where readerId is themselves.
 
-### 22. Accepted-list aggregation scans all messages on every call
+### 17. Accepted-list aggregation scans all messages on every call
 Accepted-list aggregation scans all messages of all accepted threads on every call. Fine at MVP scale; revisit with a denormalized lastMessage on Connection if it slows down.
 
-### 23. Unread total in the bottom nav is polled every 20s per screen
+### 18. Unread total in the bottom nav is polled every 20s per screen
 Unread total in the bottom nav is polled every 20s per screen (useUnreadTotal); there is no global socket, so the badge can lag up to 20s when the user is not in a chat. Real push/notification delivery comes with the Notifications module.
 
-### 24. Read-receipt unit tests exercise extracted pure helpers
+### 19. Read-receipt unit tests exercise extracted pure helpers
 Read-receipt unit tests exercise extracted pure helpers; on-screen behavior (ticks, Seen, badges, background-tab handling) is verified manually in the browser only.
 
-### 25. Notification validity filtering happens at read time
+### 20. Notification validity filtering happens at read time
 Notification validity filtering (hidden/banned/soft-deleted actors, wrong connection state) happens at read time in GET /api/notifications and unread-count; stale rows stay in the DB. Fine for MVP; add a cleanup job later.
 
-### 26. test-notifications-e2e.js has no explicit privacy-scan assertion
+### 21. test-notifications-e2e.js has no explicit privacy-scan assertion
 test-notifications-e2e.js has no explicit privacy-scan assertion; the payload shape (actor id, name, city, photoUrl) was checked by eye only.
 
-### 27. Notification badge on the Discover bell lags up to 20s
+### 22. Notification badge on the Discover bell lags up to 20s
 Notification badge on the Discover bell is refreshed by 20s polling everywhere except inside ChatScreen (which listens to notification:new on its own socket). There is no global socket yet, so the badge can lag up to 20s.
 
-### 28. Notifications bell only exists on Discover header
+### 23. Notifications bell only exists on Discover header
 The bell exists only on the Discover header; other screens have no entry to Notifications.
 
-### 29. connect_request tap navigates to Connections with { tab } param
+### 24. connect_request tap navigates to Connections with { tab } param
 connect_request tap navigates to 'Connections' with { tab } param; ConnectionsScreen.tsx was not changed in the notifications task. Verify in the browser that it opens the Requests tab.
 
-### 30. ChatScreen web Enter handling has two listeners
+### 25. ChatScreen web Enter handling has two listeners
 ChatScreen web Enter handling: onKeyPress calls handleSend() and onSubmitEditing={handleSend} is also set. Verify in the browser that one Enter sends exactly one message; if it ever double-sends, keep only one handler.
 
-### 31. test:composer-focus is a static source check
+### 26. test:composer-focus is a static source check
 test:composer-focus is a static source check; actual focus behavior is verified manually in the browser only.
 
-### 32. Old placeholder dev secrets present in git history
+### 27. Old placeholder dev secrets present in git history
 The first git commit (Oct 30 2026) contains the old placeholder dev secrets (connectlocal_dev_secret_key_2026 / connectlocal_dev_admin_key_2026) and the test snapshot files in git history. Real .env values were rotated, so this is not exploitable, but the GitHub repo must stay private.
 
-### 33. Stale root scripts/ folder
-Root scripts/ folder (seed-discover-test-data.js, test-chat.js, test-connections.js, test-trust-safety.js) looks like stale copies of apps/api/scripts files that still call seed(false). Verify and delete; running them can reset seed users.
-
-### 34. Temporary auth mechanisms remain
+### 28. Temporary auth mechanisms remain
 dev-login and the temporary x-admin-key admin middleware remain until Firebase auth and real admin auth are built.
+
+### 29. Discover invite on web clipboard fallback
+Discover invite on web: if neither navigator.share nor navigator.clipboard exists, the code still shows a 'Link copied' toast without copying anything. Show a different message or hide the button.
+
+### 30. Invite share text has no app link yet
+The invite share text has no app link yet (TODO in handleInvite). A real download or landing URL is needed before launch.
+
+### 31. DiscoverScreen fallback city Delhi during profile load
+DiscoverScreen falls back to the city 'Delhi' when the profile has not loaded (displayCity), which could show a wrong city in the tier-1-empty message. Prefer hiding the message until the profile loads.
 
 ## 🟢 Deferred By Design, Not Urgent
 
-### 35. Discover Tier 3 (network suggestions) not built
+### 32. Discover Tier 3 (network suggestions) not built
 Intentionally sequenced after Connections existed. Low priority — Tier 1
 and Tier 2 alone deliver the core value proposition.
 
-### 36. Discover filter icon is decorative (no handler)
-The filter button (`Ionicons options-outline`) in the Discover screen sub-bar is currently a non-functional/decorative placeholder. (The notification bell is now functional and wired to NotificationsScreen).
-
-### 37. No settings/edit-profile screen
+### 33. No settings/edit-profile screen
 Users can only set their photo/skills/interests/about once, during the
 initial Create Profile flow — no way to edit afterward yet.
 
-### 38. Socket.io has no Redis adapter
+### 34. Socket.io has no Redis adapter
 Fine at single-instance MVP scale. Must be added before horizontally
 scaling the API behind a load balancer (TRD Section 6.4) — do this at
 that transition point, not preemptively.

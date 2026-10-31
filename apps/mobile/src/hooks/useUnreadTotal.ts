@@ -11,7 +11,7 @@ import { getUnreadCount, getAuthToken } from '../services/api';
  */
 export function useUnreadTotal(isFocused: boolean = true): number {
   const [unreadTotal, setUnreadTotal] = useState<number>(0);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const fetchTotal = useCallback(async () => {
     // Only fetch if authenticated and app is active

@@ -47,6 +47,8 @@
     "test:composer-focus": "node scripts/test-composer-focus.js",
     "test:signup-flow": "node scripts/test-signup-flow-e2e.js",
     "test:discover-chips": "node scripts/test-discover-chips.js",
+    "test:no-placeholders": "node scripts/test-no-placeholders.js",
+    "test:discover-empty-state": "node scripts/test-discover-empty-state.js",
     "test:all-safe": "node scripts/run-all-safe.js"
   },
   "private": true
